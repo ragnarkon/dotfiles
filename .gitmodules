@@ -1,0 +1,57 @@
+[submodule "home/.vim/bundle/indentLine"]
+	path = home/.vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "home/.vim/bundle/vim-json"]
+	path = home/.vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
+[submodule "home/.vim/bundle/vim-puppet"]
+	path = home/.vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.vim/bundle/dash.vim"]
+	path = home/.vim/bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule "home/.vim/bundle/lightline.vim"]
+	path = home/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "home/.vim/bundle/lightline-bufferline"]
+	path = home/.vim/bundle/lightline-bufferline
+	url = https://github.com/mgee/lightline-bufferline.git
+[submodule "colors/atom-one-dark-terminal"]
+	path = colors/atom-one-dark-terminal
+	url = https://github.com/nathanbuchar/atom-one-dark-terminal.git
+[submodule "home/.vim/bundle/onedark.vim"]
+	path = home/.vim/bundle/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
+[submodule "home/.vim/bundle/vim-gitgutter"]
+	path = home/.vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "home/.vim/bundle/vim-commentary"]
+	path = home/.vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "home/.vim/bundle/vim-rails"]
+	path = home/.vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "home/.vim/bundle/lightline-ale"]
+	path = home/.vim/bundle/lightline-ale
+	url = https://github.com/maximbaz/lightline-ale.git
+[submodule "home/.vim/bundle/ale"]
+	path = home/.vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "home/.vim/bundle/vim-fugitive"]
+	path = home/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "home/.vim/bundle/vim-bundler"]
+	path = home/.vim/bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "home/.vim/bundle/vim-dispatch"]
+	path = home/.vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "home/.vim/bundle/vim-pathogen"]
+	path = home/.vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
