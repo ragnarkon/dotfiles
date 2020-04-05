@@ -52,6 +52,9 @@ augroup PuppetSyntax
   autocmd BufRead,BufNewFile *.eyaml set filetype=yaml
 augroup END
 
+" Auto-remove trailing whitespace upon write
+autocmd FileType puppet,ruby autocmd BufWritePre <buffer> %s/\s\+$//e
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM INTERFACE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""

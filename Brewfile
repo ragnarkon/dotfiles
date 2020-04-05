@@ -59,9 +59,16 @@ cask "font-source-code-pro"                    # Font of choice
 
 # Puppet Specific
 tap "puppetlabs/puppet"
+brew "wash"                                    # Puppet Wash
 cask "puppet-agent"                            # Puppet Agent
 cask "puppet-bolt"                             # Puppet Bolt
 cask "pdk"                                     # Puppet Development Kit
+
+# Public Cloud Providers
+brew "awscli"                                  # Amazon Web Services CLI
+brew "azure-cli"                               # Microsoft Azure CLI
+brew "doctl"                                   # Digital Ocean
+cask "google-cloud-sdk"                        # Google Cloud SDK
 
 # Day-to-day apps
 cask "1password"                               # Password manager

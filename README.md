@@ -11,6 +11,8 @@ apply my dotfiles to your profile, you probably won't get the results you are lo
 
 `curl -O https://raw.githubusercontent.com/ragnarkon/dotfiles/master/bootstrap.sh && chmod u+x bootstrap.sh && bootstrap.sh`
 
+ps. I just setup a new laptop tonight and this thing is totally broken. Will fix later.
+
 ## Manual-ish Installation
 
 I use [Homesick](https://github.com/technicalpickles/homesick) to manage my dotfiles.
