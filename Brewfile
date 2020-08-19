@@ -8,7 +8,7 @@ brew "bash"                                    # Shell
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits
 brew "tmux"                                    # Terminal multiplexer
-brew "vim", args: ["with-override-system-vi"]  # Text editor
+brew "vim"                                     # Text editor
 brew "zsh"                                     # Shell
 
 # Languages
@@ -57,7 +57,7 @@ cask "pdk"                                     # Puppet Development Kit
 
 # Public Cloud
 brew "awscli"                                  # Amazon Web Services CLI
-brew "terraform"                               # Resource provisioning tool
+brew "tfenv"                                   # Shim manager for Terraform
 
 # Day-to-day apps
 cask "google-chrome"                           # Web browser

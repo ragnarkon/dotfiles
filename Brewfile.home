@@ -31,5 +31,6 @@ cask "textual"                                 # IRC client
 cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
 
 # Casks - As Needed
+# cask "1password-cli"                           # 1password CLI
 # cask "vagrant"                                 # VM manager
 # cask "vmware-fusion"                           # Hypervisor
