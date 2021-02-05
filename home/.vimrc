@@ -171,6 +171,11 @@ let g:indentLine_color_gui = '#4b5263'
 let g:indentLine_fileTypeExclude = ['markdown', 'json']
 let g:vim_json_syntax_conceal = 0
 
+" Terraform
+let g:terraform_align = 1
+let g:terraform_fold_sections = 1
+let g:terraform_fmt_on_save = 1
+
 " polyglot
 " NOTE: uninstalled for now, may reinstall later
 " let g:polyglot_disabled = ['puppet']

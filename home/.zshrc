@@ -73,8 +73,9 @@ plugins=(
   git
   pdk
   rbenv
-  pyenv
+#  pyenv
 #  plenv
+  tfenv
   gpg-agent
   thefuck
 )

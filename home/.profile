@@ -16,3 +16,8 @@ if [ -f $HOME/.cacert.pem ]; then
   # AWS
   export AWS_CA_BUNDLE=$CAFILE
 fi
+
+# Vault config
+if [ -f $HOME/.vault-config ]; then
+  source $HOME/.vault-config
+fi
