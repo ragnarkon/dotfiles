@@ -23,7 +23,7 @@ brew "perl-build"                              # Builds Perl
 brew "plenv"                                   # Shim manager for Perl
 brew "cpanminus"                               # CLI tool for CPAN
 ## Go
-brew "go"                                      # Golang
+brew "goenv"                                   # Shim manager for Golang
 
 # Helpful CLI utilities
 brew "bat"                                     # Fancy 'cat' replacement
@@ -51,8 +51,10 @@ cask "font-source-code-pro"                    # Font of choice
 # Puppet Specific
 tap "puppetlabs/puppet"
 brew "wash"                                    # Puppet Wash
-cask "puppet-agent"                            # Puppet Agent
-cask "puppet-bolt"                             # Puppet Bolt
+# cask "puppet-agent"                            # Puppet Agent
+cask "puppet-agent-6"
+# cask "puppet-bolt"                             # Puppet Bolt
+cask "puppet-bolt@2"
 cask "pdk"                                     # Puppet Development Kit
 
 # Public Cloud
