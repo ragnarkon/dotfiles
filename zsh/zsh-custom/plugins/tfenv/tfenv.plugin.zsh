@@ -29,7 +29,7 @@ if [[ $FOUND_TFENV -eq 1 ]]; then
 
   function current_terraform() {
     local tfver=$(tfenv version-name 2>/dev/null)
-    if [[ $tfver -eq "" ]]; then
+    if [[ -z $tfver ]]; then
       echo "none"
     else
       echo "$tfver"
