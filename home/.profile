@@ -22,8 +22,3 @@ if [ -f $HOME/.vault-config ]; then
   source $HOME/.vault-config
 fi
 
-# GPG SSH
-if [ -f /usr/local/bin/gpgconf ]; then
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  gpgconf --launch gpg-agent
-fi
