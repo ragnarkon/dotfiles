@@ -34,6 +34,7 @@ brew "fzf"                                     # Fuzzy finder
 brew "jq"                                      # JSON parser/processor
 brew "httpie"                                  # Like 'curl', but easier
 brew "pandoc"                                  # Converts between doc formats
+brew "ripgrep"                                 # Regex file line searching tool
 brew "thefuck"                                 # Fat finger fixer
 brew "watch"                                   # Run command on schedule, watch output
 brew "yamllint"                                # Lints YAML files.
