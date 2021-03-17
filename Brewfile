@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 
 # Core Apps
 brew "bash"                                    # Shell
+brew "coreutils"                               # GNU Core Utils
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits
 brew "tmux"                                    # Terminal multiplexer
@@ -29,6 +30,7 @@ brew "goenv"                                   # Shim manager for Golang
 brew "bat"                                     # Fancy 'cat' replacement
 brew "dos2unix"                                # CRLF <-> LF conversion
 brew "exa"                                     # Fancy 'ls' replacement
+brew "fzf"                                     # Fuzzy finder
 brew "jq"                                      # JSON parser/processor
 brew "httpie"                                  # Like 'curl', but easier
 brew "pandoc"                                  # Converts between doc formats

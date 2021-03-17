@@ -1,11 +1,10 @@
 # Dotfiles repo
 
-I work in IT operations in the development engineering group (one of the handful of SRE-like teams) for a Fortune 500 company. My team in particular is responsible for System Center Configuration
-Manager (Microsoft systems management product), Jamf Pro (macOS/iOS management suite), and Puppet (configuration management tool), along with the various custom integrations between these
-tools and other systems used within the company.
+I work in IT operations in the cloud engineering group (one of the handful of SRE-like teams) for a Fortune 500 company. My team is responsible for all things public cloud,
+as well as integrations between the public cloud and our "traditional" data centers.
 
-Most of my profile consists of tools and utilities common in the IT world, but there are several product-specific tools/configs related to my day-to-day work. In other words... don't blindly
-apply my dotfiles to your profile, you probably won't get the results you are looking for.
+My focus in particular revolves around various infrastructure-as-code tools (ie. Terraform) and configuration management tools (ie. Puppet). Therefore, my dotfiles repo
+will be heavily opinionated towards using those tools. That said, most of this repo consists of tools and utilities are common across the IT world.
 
 ## Bootstrap
 
