@@ -47,13 +47,18 @@ set shiftwidth=2
 set foldmethod=indent
 set foldnestmax=1
 
-" Extension specific syntax highlighting
+" Extension specific syntax highlighting for Puppet
 augroup PuppetSyntax
   autocmd BufRead,BufNewFile *.eyaml set filetype=yaml
 augroup END
 
+" Golang likes 4-space tabs
+augroup GoSyntax
+  autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab!
+augroup END
+
 " Auto-remove trailing whitespace upon write
-autocmd FileType puppet,ruby autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType puppet,ruby,go autocmd BufWritePre <buffer> %s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM INTERFACE

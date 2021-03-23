@@ -29,6 +29,7 @@ function _update_agents {
   fi
 }
 
+export GPG_TTY=$TTY
 add-zsh-hook preexec _tmux_update_env
 add-zsh-hook preexec _update_agents
 
