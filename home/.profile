@@ -19,8 +19,8 @@ if [ -f $HOME/.cacert.pem ]; then
   export CLOUDSDK_CORE_CUSTOM_CA_CERTS_FILE=$CAFILE
 fi
 
-# Vault config
-if [ -f $HOME/.vault-config ]; then
-  source $HOME/.vault-config
+# Secrets and stuff
+if [ -f $HOME/.private-config ]; then
+  source $HOME/.private-config
 fi
 
