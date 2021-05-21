@@ -8,6 +8,7 @@ brew "bash"                                    # Shell
 brew "coreutils"                               # GNU Core Utils
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits
+brew "subversion"                              # Source code manager
 brew "tmux"                                    # Terminal multiplexer
 brew "vim"                                     # Text editor
 brew "zsh"                                     # Shell
@@ -25,6 +26,9 @@ brew "plenv"                                   # Shim manager for Perl
 brew "cpanminus"                               # CLI tool for CPAN
 ## Go
 brew "goenv"                                   # Shim manager for Golang
+## Node
+brew "node-build"                              # Builds Node.js
+brew "nodenv"                                  # Shim manager for Node.js
 
 # Helpful CLI utilities
 brew "bat"                                     # Fancy 'cat' replacement
@@ -39,6 +43,10 @@ brew "thefuck"                                 # Fat finger fixer
 brew "watch"                                   # Run command on schedule, watch output
 brew "yamllint"                                # Lints YAML files.
 brew "xsv"                                     # CSV toolkit
+
+# Database CLI clients
+brew "mycli"                                   # MySQL / MariaDB CLI client
+brew "pgcli"                                   # PostgreSQL CLI client
 
 # Core Casks
 cask "dash"                                    # API browser
@@ -77,6 +85,7 @@ mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 # As needed
 # brew "azure-cli"                               # Microsoft Azure CLI
 # cask "google-cloud-sdk"                        # Google Cloud SDK
+# brew "mono"                                    # .NET Framework
 # cask "powershell"                              # Windows automation & config framework
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
 # cask "xquartz"                                 # X11

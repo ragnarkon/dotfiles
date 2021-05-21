@@ -29,6 +29,16 @@ if [ -f /usr/local/bin/plenv ]; then
   eval "$(/usr/local/bin/plenv init -)"
 fi
 
+# Go goenv
+if [ -f /usr/local/bin/goenv ]; then
+  eval "$(/usr/local/bin/goenv init -)"
+fi
+
+# Node.js nodenv
+if [ -f /usr/local/bin/nodenv ]; then
+  eval "$(/usr/local/bin/nodenv init -)"
+fi
+
 # thefuck
 if [ -f /usr/local/bin/thefuck ]; then
   eval $(/usr/local/bin/thefuck --alias)

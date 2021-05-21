@@ -1,4 +1,8 @@
-home/.config/thefuck/__pycache__
+# Private settings
+home/.config/gcloud
+home/.config/pgcli
 home/.config/puppet/analytics.yml
-Brewfile.lock.json
+home/.config/thefuck/__pycache__
 home/.config/iterm2/AppSupport
+home/.config/wireshark
+Brewfile.lock.json
