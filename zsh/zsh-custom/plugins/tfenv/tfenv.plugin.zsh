@@ -36,12 +36,12 @@ if [[ $FOUND_TFENV -eq 1 ]]; then
     fi
   }
 
-function tfenv_prompt_info() {
-  local terraform=$(current_terraform)
-  echo -n "${ZSH_THEME_TERRAFORM_PROMPT_PREFIX}"
-  echo -n "${terraform}"
-  echo "${ZSH_THEME_TERRAFORM_PROMPT_SUFFIX}"
-}
+  function tfenv_prompt_info() {
+    local terraform=$(current_terraform)
+    echo -n "${ZSH_THEME_TERRAFORM_PROMPT_PREFIX}"
+    echo -n "${terraform}"
+    echo "${ZSH_THEME_TERRAFORM_PROMPT_SUFFIX}"
+  }
 else
   alias terraforms="terraform --version"
   function tfenv_prompt_info() {

@@ -82,12 +82,16 @@ ZSH_CUSTOM=$HOMESICK/zsh/zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  fzf
   git
   gpg-agent-custom
-  fzf
-  dash
-  thefuck
+  golang
   pdk
+  thefuck
+  goenv
+  nodenv
+  plenv
+  pyenv
   rbenv
   tfenv
 )
