@@ -1,0 +1,10 @@
+#!/bin/sh
+
+git filter-branch --commit-filter '
+if [ "$GIT_COMMITTER_EMAIL" = "ragnarkon@gmail.com" ]
+then
+git commit-tree -S "$@";
+fi
+' -- --all
+
+git push origin master --force

@@ -19,10 +19,10 @@ echo "Installing homebrew..."
 
 # Install Ruby & Homesick
 brew install rbenv
-brew install ruby-build
-eval "$(/usr/local/bin/rbenv init -)"
 rbenv install 3.0.1
-gem install homesick --no-doc --no-ri
+eval "$(rbenv init -)"
+rbenv shell 3.0.1
+gem install homesick --no-document
 rbenv rehash
 
 # Setup Homesick Castle
@@ -32,7 +32,7 @@ homesick symlink dotfiles
 # Install apps from Brewfile
 echo "Installing apps from Brewfile..."
 brew bundle --file=~/.homesick/repos/dotfiles/Brewfile
-brew cask cleanup
+brew cleanup
 
 echo "Changing default shell to zsh..."
 sudo dscl . -create "/Users/$USER" UserShell /usr/local/bin/zsh

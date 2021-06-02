@@ -8,7 +8,7 @@ will be heavily opinionated towards using those tools. That said, most of this r
 
 ## Bootstrap
 
-`curl -O https://raw.githubusercontent.com/ragnarkon/dotfiles/master/bootstrap.sh && chmod u+x bootstrap.sh && bootstrap.sh`
+`curl -O https://raw.githubusercontent.com/ragnarkon/dotfiles/master/bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh`
 
 ps. I just setup a new laptop tonight and this thing is totally broken. Will fix later.
 
