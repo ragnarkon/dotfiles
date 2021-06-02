@@ -61,7 +61,7 @@ cask "font-source-code-pro"                    # Font of choice
 
 # Puppet Specific
 tap "puppetlabs/puppet"
-brew "wash"                                    # Puppet Wash
+# brew "wash"                                    # Puppet Wash, doesn't work with latest FUSE
 # cask "puppet-agent"                            # Puppet Agent
 cask "puppet-agent-6"
 # cask "puppet-bolt"                             # Puppet Bolt
