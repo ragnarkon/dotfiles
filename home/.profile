@@ -2,7 +2,7 @@
 # with both Bash and ZSH
 
 # Go
-export GOPATH=$HOME/repos/go
+export GOPATH=$HOME/repos/gopath
 
 # CA Certs (pip, among others)
 if [ -f $HOME/.cacert.pem ]; then
