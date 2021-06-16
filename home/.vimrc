@@ -130,6 +130,7 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-g> <Plug>(ale_go_to_definition)
 let g:lightline#ale#indicator_checking = 'L ..'
+let g:ale_completion_enabled = 1
 
 " Lightline
 let g:lightline#bufferline#show_number = 1
