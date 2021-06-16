@@ -64,3 +64,6 @@
 [submodule "home/.vim/bundle/vim-go"]
 	path = home/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "home/.vim/bundle/coc.nvim"]
+	path = home/.vim/bundle/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git

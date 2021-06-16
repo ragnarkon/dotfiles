@@ -1,0 +1,11 @@
+{
+  "diagnostic.displayByAle": true
+  "languageserver": {
+    "puppet": {
+      "command": "puppet-languageserver",
+      "args": ["--stdio"],
+      "filetypes": ["puppet"],
+      "rootPatterns": [".git/", "metadata.json"]
+    }
+  }
+}
