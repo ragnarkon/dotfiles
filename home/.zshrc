@@ -2,7 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Add Homebrew path to PATH
-export PATH=/usr/local/sbin:$PATH
+if [ -d "/usr/local/Homebrew/bin" ]; then
+  export PATH=/usr/local/Homebrew/bin:$PATH
+elif [ -d "/opt/homebrew/bin" ]; then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
 
 # Path to Homesick castle
 HOMESICK=$HOME/.homesick/repos/dotfiles
