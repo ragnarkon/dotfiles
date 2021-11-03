@@ -54,7 +54,6 @@ cask "docker"                                  # Containers
 cask "drawio"                                  # Flowcharts
 cask "iterm2"                                  # Terminal emulator
 cask "visual-studio-code"                      # Code editor
-cask "wireshark"                               # Network analysis
 
 # Fonts
 cask "font-source-code-pro"                    # Font of choice
@@ -63,9 +62,9 @@ cask "font-source-code-pro"                    # Font of choice
 tap "puppetlabs/puppet"
 # brew "wash"                                    # Puppet Wash, doesn't work with latest FUSE
 # cask "puppet-agent"                            # Puppet Agent
-cask "puppet-agent-6"
-# cask "puppet-bolt"                             # Puppet Bolt
-cask "puppet-bolt@2"
+# cask "puppet-agent-6"
+cask "puppet-bolt"                             # Puppet Bolt
+# cask "puppet-bolt@2"
 cask "pdk"                                     # Puppet Development Kit
 
 # Public Cloud
@@ -73,22 +72,27 @@ brew "awscli"                                  # Amazon Web Services CLI
 brew "tfenv"                                   # Shim manager for Terraform
 
 # Day-to-day apps
-cask "google-chrome"                           # Web browser
 cask "slack"                                   # Collaboration
 
 # App Store Apps
 brew "mas"                                     # CLI to the App Store
-mas "Bear", id: 1091189122                     # Note taking app
-mas "SnippetsLab", id: 1006087419              # Code snippet manager
 mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 
 # As needed
 # brew "azure-cli"                               # Microsoft Azure CLI
-# cask "google-cloud-sdk"                        # Google Cloud SDK
 # brew "mono"                                    # .NET Framework
+
+# As needed - Casks
+# cask "google-cloud-sdk"                        # Google Cloud SDK
+# cask "google-chrome"                           # Web browser
 # cask "powershell"                              # Windows automation & config framework
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
+# cask "wireshark"                               # Network analysis
 # cask "xquartz"                                 # X11
+
+# As needed - App Store Apps
+# mas "Bear", id: 1091189122                     # Note taking app
+# mas "SnippetsLab", id: 1006087419              # Code snippet manager
 
 # Cool, but practically pointless
 # brew "neofetch", args: ["without-imagemagick"] # Displays OS Info
