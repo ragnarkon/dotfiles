@@ -3,6 +3,7 @@
 # Based off of the rbenv plugin.
 
 FOUND_TFENV=$+commands[tfenv]
+FOUND_TERRAFORM=$+commands[terraform]
 
 if [[ $FOUND_TFENV -ne 1 ]]; then
   tfenvdirs=("$HOME/.tfenv" "/usr/local/tfenv" "/opt/tfenv" "/usr/local/opt/tfenv")
@@ -46,7 +47,11 @@ else
   alias terraforms="terraform --version"
   function tfenv_prompt_info() {
     echo -n "${ZSH_THEME_TERRAFORM_PROMPT_PREFIX}"
-    echo -n "system: $(terraform --version | head -1 | cut -f-2 -d ' ')"
+    if [[ $FOUND_TERRAFORM -ne 1 ]]; then
+      echo -n "system: none"
+    else
+      echo -n "system: $(terraform --version | head -1 | cut -f-2 -d ' ')"
+    fi
     echo "${ZSH_THEME_TERRAFORM_PROMPT_SUFFIX}"
   }
 fi
