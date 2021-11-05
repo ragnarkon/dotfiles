@@ -8,6 +8,20 @@ tap "homebrew/cask-fonts"
 # Brews - As Meeded
 # brew "doctl"                                   # Digital Ocean
 
+# Casks
+cask "1password"                               # Password manager
+cask "discord"                                 # Chat/VoIP/distribution software
+cask "firefox"                                 # Web browser
+cask "monodraw"                                # ASCII flowcharts
+cask "notion"                                  # Note taking app
+cask "textual"                                 # IRC client
+cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
+
+# Casks - As Needed
+# cask "1password-cli"                           # 1password CLI
+# cask "vagrant"                                 # VM manager
+# cask "vmware-fusion"                           # Hypervisor
+
 # App Store Apps
 brew "mas"                                     # CLI to the App Store
 mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without the subscription
@@ -21,16 +35,3 @@ mas "Xcode", id: 497799835                     # Apple's IDE
 
 # App Store Apps - As Needed
 # mas "MainStage 3", id: 634159523               # Live music performance software
-
-# Casks
-cask "1password"                               # Password manager
-cask "discord"                                 # Chat/VoIP/distribution software
-cask "firefox"                                 # Web browser
-cask "monodraw"                                # ASCII flowcharts
-cask "textual"                                 # IRC client
-cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
-
-# Casks - As Needed
-# cask "1password-cli"                           # 1password CLI
-# cask "vagrant"                                 # VM manager
-# cask "vmware-fusion"                           # Hypervisor
