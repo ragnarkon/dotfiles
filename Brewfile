@@ -74,15 +74,14 @@ cask "slack"                                   # Collaboration
 
 # App Store Apps
 brew "mas"                                     # CLI to the App Store
-mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 
 # As needed
 # brew "azure-cli"                               # Microsoft Azure CLI
-# cask "docker"                                  # Containers
-# cask "drawio"                                  # Flowcharts
 # brew "mono"                                    # .NET Framework
 
 # As needed - Casks
+# cask "docker"                                  # Containers
+# cask "drawio"                                  # Flowcharts
 # cask "google-cloud-sdk"                        # Google Cloud SDK
 # cask "google-chrome"                           # Web browser
 # cask "powershell"                              # Windows automation & config framework
@@ -92,6 +91,7 @@ mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 
 # As needed - App Store Apps
 # mas "Bear", id: 1091189122                     # Note taking app
+# mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 # mas "SnippetsLab", id: 1006087419              # Code snippet manager
 
 # Cool, but practically pointless
