@@ -50,8 +50,6 @@ brew "pgcli"                                   # PostgreSQL CLI client
 
 # Core Casks
 cask "dash"                                    # API browser
-cask "docker"                                  # Containers
-cask "drawio"                                  # Flowcharts
 cask "iterm2"                                  # Terminal emulator
 cask "visual-studio-code"                      # Code editor
 
@@ -80,6 +78,8 @@ mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
 
 # As needed
 # brew "azure-cli"                               # Microsoft Azure CLI
+# cask "docker"                                  # Containers
+# cask "drawio"                                  # Flowcharts
 # brew "mono"                                    # .NET Framework
 
 # As needed - Casks
