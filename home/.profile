@@ -9,6 +9,8 @@ if [ -f $HOME/.cacert.pem ]; then
   export CAFILE=$HOME/.cacert.pem
   # OpenSSL
   export SSL_CERT_FILE=$CAFILE
+  # Curl
+  export CURL_CA_BUNDLE=$CAFILE
   # Python - requests
   export REQUESTS_CA_BUNDLE=$CAFILE
   # Python - httplib2
