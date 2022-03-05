@@ -84,6 +84,8 @@ brew "mas"                                     # CLI to the App Store
 # cask "drawio"                                  # Flowcharts
 # cask "google-cloud-sdk"                        # Google Cloud SDK
 # cask "google-chrome"                           # Web browser
+# cask "min"                                     # Minimal web browser
+# cask "paw"                                     # API tool
 # cask "powershell"                              # Windows automation & config framework
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
 # cask "wireshark"                               # Network analysis
