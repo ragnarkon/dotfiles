@@ -40,6 +40,7 @@ brew "httpie"                                  # Like 'curl', but easier
 brew "pandoc"                                  # Converts between doc formats
 brew "ripgrep"                                 # Regex file line searching tool
 brew "thefuck"                                 # Fat finger fixer
+brew "tldr"                                    # Documentation that doesn't suck
 brew "watch"                                   # Run command on schedule, watch output
 brew "yamllint"                                # Lints YAML files.
 brew "xsv"                                     # CSV toolkit
