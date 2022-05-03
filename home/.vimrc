@@ -170,9 +170,6 @@ let g:lightline = {
       \ }
       \ }
 
-" NerdTree
-map <C-n> :NERDTreeToggle<CR>
-
 " IndentLine
 let g:indentLine_color_gui = '#4b5263'
 let g:indentLine_fileTypeExclude = ['markdown', 'json']
