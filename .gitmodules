@@ -7,9 +7,6 @@
 [submodule "home/.vim/bundle/vim-puppet"]
 	path = home/.vim/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
-[submodule "home/.vim/bundle/nerdtree"]
-	path = home/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
@@ -67,3 +64,6 @@
 [submodule "home/.vim/bundle/fzf"]
 	path = home/.vim/bundle/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "home/.vim/bundle/vim-vinegar"]
+	path = home/.vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
