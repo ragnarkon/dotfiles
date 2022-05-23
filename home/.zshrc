@@ -2,10 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Add Homebrew path to PATH
-if [ -d "/usr/local/Homebrew/bin" ]; then
-  export PATH=/usr/local/Homebrew/bin:$PATH
-elif [ -d "/opt/homebrew/bin" ]; then
-  export PATH=/opt/homebrew/bin:$PATH
+# Homebrew installs to a different path on ARM64 macOS devices
+if [ "$(arch)" = "arm64" ]; then
+  if [ -d "/opt/homebrew/bin" ]; then
+    export PATH=/opt/homebrew/bin:$PATH
+  fi
+else
+  if [ -d "/usr/local/Homebrew/bin"]; then
+    export PATH=/usr/local/Homebrew/bin:$PATH
+  fi
 fi
 
 # Path to Homesick castle
@@ -105,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Source ~/.profile
-if [ -f ~/.profile ]; then 
+if [ -f ~/.profile ]; then
   source ~/.profile
 fi
 
