@@ -8,7 +8,7 @@ if [ "$(arch)" = "arm64" ]; then
     export PATH=/opt/homebrew/bin:$PATH
   fi
 else
-  if [ -d "/usr/local/Homebrew/bin"]; then
+  if [ -d "/usr/local/Homebrew/bin" ]; then
     export PATH=/usr/local/Homebrew/bin:$PATH
   fi
 fi
