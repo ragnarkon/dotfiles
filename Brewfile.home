@@ -6,7 +6,7 @@ tap "homebrew/cask-fonts"
 # Brews
 
 # Brews - As Meeded
-# brew "doctl"                                   # Digital Ocean
+# brew "doctl"                                 # Digital Ocean
 
 # Casks
 cask "1password"                               # Password manager
@@ -17,13 +17,14 @@ cask "iina"                                    # Media player
 cask "imageoptim"                              # Image toolkit app
 cask "monodraw"                                # ASCII flowcharts
 cask "notion"                                  # Note taking app
+cask "orion"                                   # WebKit-based browser
 cask "textual"                                 # IRC client
 cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
 
 # Casks - As Needed
-# cask "1password-cli"                           # 1password CLI
-# cask "vagrant"                                 # VM manager
-# cask "vmware-fusion"                           # Hypervisor
+# cask "1password-cli"                         # 1password CLI
+# cask "vagrant"                               # VM manager
+# cask "vmware-fusion"                         # Hypervisor
 
 # App Store Apps
 brew "mas"                                     # CLI to the App Store
@@ -31,10 +32,12 @@ mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without 
 mas "Affinity Photo", id: 824183456            # Adobe Photoshop, but without the subscription
 mas "Affinity Publisher", id: 881418622        # Adobe InDesign, but without the subscription
 mas "Compressor", id: 424390742                # Media encoder
+mas "Craft", id: 1487937127                    # Note taking application
+mas "Dropover", id: 1355679052                 # Organize stuff easily
 mas "Final Cut Pro", id: 424389933             # Non-linear editor
 mas "Logic Pro X", id: 634148309               # Digital audio workstation
 mas "Motion", id: 434290957                    # Motion graphics software
 mas "Xcode", id: 497799835                     # Apple's IDE
 
 # App Store Apps - As Needed
-# mas "MainStage 3", id: 634159523               # Live music performance software
+# mas "MainStage 3", id: 634159523             # Live music performance software

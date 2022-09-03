@@ -7,3 +7,5 @@ home/.config/iterm2/AppSupport
 home/.config/wireshark
 home/.config/NuGet
 Brewfile.lock.json
+home/.vim/.netrwhist
+home/.config/raycast
