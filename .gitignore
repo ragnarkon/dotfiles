@@ -5,6 +5,7 @@ home/.config/puppet/analytics.yml
 home/.config/thefuck/__pycache__
 home/.config/iterm2/AppSupport
 home/.config/wireshark
+home/.config/wslu
 home/.config/NuGet
 Brewfile.lock.json
 home/.vim/.netrwhist
