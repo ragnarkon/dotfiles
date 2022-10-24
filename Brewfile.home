@@ -10,7 +10,6 @@ tap "homebrew/cask-fonts"
 
 # Casks
 cask "1password"                               # Password manager
-cask "alfred"                                  # All-around awesome
 cask "discord"                                 # Chat/VoIP/distribution software
 cask "firefox"                                 # Web browser
 cask "iina"                                    # Media player
@@ -18,6 +17,7 @@ cask "imageoptim"                              # Image toolkit app
 cask "monodraw"                                # ASCII flowcharts
 cask "notion"                                  # Note taking app
 cask "orion"                                   # WebKit-based browser
+cask "raycast"                                 # All-around awesome
 cask "textual"                                 # IRC client
 cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
 

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Determine what environment we're actually running in
-case "$(uname -r)" in
+case "$(uname)" in
   *Microsoft*)  OS="WSL";;
   *microsoft*)  OS="WSL2";;
   Linux*)       OS="Linux";;
@@ -142,7 +142,7 @@ fi
 
 # Fix stupid LS_COLORS on Ubuntu.
 # There is probably a better way to do this but I don't know what it is.
-if [ "$(awk -F= '/^NAME/{print $2}' /etc/os-release)" = "\"Ubuntu\"" ]; then
+if [[ -f "/etc/os-release" && "$(awk -F= '/^NAME/{print $2}' /etc/os-release)" = "\"Ubuntu\"" ]]; then
   eval `dircolors`
   export LS_COLORS=$LS_COLORS:'ow=7;32:'
 fi

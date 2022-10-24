@@ -68,6 +68,7 @@ cask "pdk"                                     # Puppet Development Kit
 
 # Public Cloud
 brew "awscli"                                  # Amazon Web Services CLI
+cask "google-cloud-sdk"                        # Google Cloud SDK
 brew "tfenv"                                   # Shim manager for Terraform
 
 # Day-to-day apps
@@ -83,7 +84,6 @@ brew "mas"                                     # CLI to the App Store
 # As needed - Casks
 # cask "docker"                                  # Containers
 # cask "drawio"                                  # Flowcharts
-# cask "google-cloud-sdk"                        # Google Cloud SDK
 # cask "google-chrome"                           # Web browser
 # cask "min"                                     # Minimal web browser
 # cask "paw"                                     # API tool
