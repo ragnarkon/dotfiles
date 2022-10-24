@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Determine what environment we're actually running in
-case "$(uname)" in
+case "$(uname -ra)" in
   *Microsoft*)  OS="WSL";;
   *microsoft*)  OS="WSL2";;
   Linux*)       OS="Linux";;
