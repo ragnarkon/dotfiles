@@ -1,0 +1,8 @@
+import:
+  - ~/.homesick/repos/dotfiles/colors/alacritty/one_dark.yaml
+
+font:
+  normal:
+    family: Source Code Pro
+    style: SemiBold
+    size: 13.0
