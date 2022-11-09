@@ -119,8 +119,8 @@ plugins=(
 )
 
 case $OS in
-  macOS)  plugins+=(gpg-agent-custom);;
   WSL2)   plugins+=(wsl2-ssh-pageant);;
+  *)      plugins+=(gpg-agent-custom);;
 esac
 
 source $ZSH/oh-my-zsh.sh
