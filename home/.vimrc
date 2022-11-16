@@ -53,12 +53,12 @@ augroup PuppetSyntax
 augroup END
 
 " Golang likes 4-space tabs
-augroup GoSyntax
-  autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab!
+augroup FourSyntax
+  autocmd FileType go,python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab!
 augroup END
 
 " Auto-remove trailing whitespace upon write
-autocmd FileType puppet,ruby,go autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType puppet,ruby,go,python autocmd BufWritePre <buffer> %s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM INTERFACE

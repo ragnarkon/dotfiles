@@ -116,6 +116,7 @@ plugins=(
   pyenv
   rbenv
   tfenv
+  kubectl
 )
 
 case $OS in
