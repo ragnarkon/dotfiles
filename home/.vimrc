@@ -53,8 +53,13 @@ augroup PuppetSyntax
 augroup END
 
 " Golang likes 4-space tabs
-augroup FourSyntax
-  autocmd FileType go,python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab!
+augroup GoSyntax
+  autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab!
+augroup END
+
+" Python also likes 4-space tabs, but not expandtab
+augroup PySyntax
+  autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 " Auto-remove trailing whitespace upon write
