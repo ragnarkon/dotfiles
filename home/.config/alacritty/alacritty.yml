@@ -1,8 +1,19 @@
 import:
   - ~/.homesick/repos/dotfiles/colors/alacritty/one_dark.yaml
 
+window:
+  padding:
+    x: 5
+    y: 5
+
 font:
   normal:
     family: Source Code Pro
     style: SemiBold
   size: 13.0
+
+key_bindings:
+  - { key: Insert, mods: Shift, action: Paste }
+  - { key: Insert, mods: Control, action: Copy }
+
+live_config_reload: true
