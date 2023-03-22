@@ -27,6 +27,27 @@ fi
 if [[ $FOUND_PYENV -eq 1 ]]; then
     eval "$(pyenv init --path)"
     eval "$(pyenv init --no-rehash - zsh)"
+
+    function current_python() {
+        echo "$(pyenv version-name)"
+    }
+
+
+    function pyenv_prompt_info() {
+        local python=${$(current_python):gs/%/%%}
+        echo -n "${ZSH_THEME_PYTHON_PROMPT_PREFIX}"
+        echo -n "${python}"
+        echo "${ZSH_THEME_PYTHON_PROMPT_SUFFIX}"
+    }
+else
+    function current_ruby() { echo "not supported" }
+    function current_gemset() { echo "not supported" }
+    function gems() { echo "not supported" }
+    function rbenv_prompt_info() {
+      echo -n "${ZSH_THEME_RUBY_PROMPT_PREFIX}"
+      echo -n "system: $(python --version | cut -f-2 -d ' ' | sed 's/%/%%/g')"
+      echo "${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
+    }
 fi
 
 unset FOUND_PYENV pyenvdirs dir
