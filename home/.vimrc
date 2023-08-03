@@ -137,6 +137,12 @@ nmap <silent> <C-g> <Plug>(ale_go_to_definition)
 let g:lightline#ale#indicator_checking = 'L ..'
 let g:ale_completion_enabled = 1
 
+" FZF
+nnoremap \ :Rg<CR>
+nnoremap <C-T> :Files<cr>
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>s :BLines<cr>
+
 " Lightline
 let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#unnamed     = '[No Name]'
