@@ -46,6 +46,7 @@ brew "yamllint"                                # Lints YAML files.
 brew "xsv"                                     # CSV toolkit
 
 # Database CLI clients
+brew "litecli"                                 # SQLite CLI client
 brew "mycli"                                   # MySQL / MariaDB CLI client
 brew "pgcli"                                   # PostgreSQL CLI client
 
