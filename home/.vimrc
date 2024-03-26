@@ -86,6 +86,8 @@ set wrap " wrap lines
 augroup WrapLineInMDFile
   autocmd!
   autocmd FileType markdown setlocal tw=174
+  autocmd FileType markdown setlocal fo+=aw
+  autocmd FileType markdown setlocal fo-=l
 augroup END
 
 " Lazy redraw (improve performance)
