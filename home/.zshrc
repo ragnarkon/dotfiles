@@ -117,6 +117,7 @@ plugins=(
   rbenv
   tfenv
   kubectl
+  stc
 )
 
 case $OS in
@@ -171,3 +172,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
