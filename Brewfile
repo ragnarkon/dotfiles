@@ -1,6 +1,4 @@
-tap "homebrew/core"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 # Core Apps
@@ -20,10 +18,6 @@ brew "rbenv"                                   # Shim manager for Ruby
 ## Python
 brew "pyenv"                                   # Shim manager for Python
 brew "pipenv"                                  # Python package dependency manager
-## Perl
-brew "perl-build"                              # Builds Perl
-brew "plenv"                                   # Shim manager for Perl
-brew "cpanminus"                               # CLI tool for CPAN
 ## Go
 brew "goenv"                                   # Shim manager for Golang
 ## Node
@@ -58,29 +52,22 @@ cask "visual-studio-code"                      # Code editor
 # Fonts
 cask "font-source-code-pro"                    # Font of choice
 
-# Puppet Specific
-tap "puppetlabs/puppet"
-# brew "wash"                                    # Puppet Wash, doesn't work with latest FUSE
-# cask "puppet-agent"                            # Puppet Agent
-# cask "puppet-agent-6"
-cask "puppet-bolt"                             # Puppet Bolt
-# cask "puppet-bolt@2"
-cask "pdk"                                     # Puppet Development Kit
-
 # Public Cloud
-brew "awscli"                                  # Amazon Web Services CLI
 cask "google-cloud-sdk"                        # Google Cloud SDK
 brew "tfenv"                                   # Shim manager for Terraform
-
-# Day-to-day apps
-cask "slack"                                   # Collaboration
 
 # App Store Apps
 brew "mas"                                     # CLI to the App Store
 
 # As needed
+# brew "awscli"                                  # Amazon Web Services CLI
 # brew "azure-cli"                               # Microsoft Azure CLI
 # brew "mono"                                    # .NET Framework
+## Perl
+# brew "perl-build"                              # Builds Perl
+# brew "plenv"                                   # Shim manager for Perl
+# brew "cpanminus"                               # CLI tool for CPAN
+
 
 # As needed - Casks
 # cask "docker"                                  # Containers

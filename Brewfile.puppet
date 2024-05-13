@@ -1,0 +1,5 @@
+# Puppet Specific
+tap "puppetlabs/puppet"
+cask "puppet-agent"                            # Puppet Agent
+cask "puppet-bolt"                             # Puppet Bolt
+cask "pdk"                                     # Puppet Development Kit

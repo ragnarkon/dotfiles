@@ -18,10 +18,11 @@ echo "Installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install Ruby & Homesick
+# TODO: ADD STUFF TO PATH
 brew install rbenv
-rbenv install 3.0.1
+rbenv install 3.3.1
 eval "$(rbenv init -)"
-rbenv shell 3.0.1
+rbenv shell 3.3.1
 gem install homesick --no-document
 rbenv rehash
 
