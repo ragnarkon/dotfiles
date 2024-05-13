@@ -24,6 +24,24 @@ fi
 
 if [[ $FOUND_GOENV -eq 1 ]]; then
     eval "$(goenv init --no-rehash - zsh)"
+
+    function current_golang() {
+        echo "$(goenv version-name)"
+    }
+
+    function goenv_prompt_info() {
+        local golang=${$(current_golang):gs/%/%%}
+        echo -n "${ZSH_THEME_GOLANG_PROMPT_PREFIX}"
+        echo -n "${golang}"
+        echo -n "${ZSH_THEME_GOLANG_PROMPT_SUFFIX}"
+    }
+else
+    function current_golang() { echo "not supported" }
+    function pyenv_prompt_info() {
+        echo -n "${ZSH_THEME_GOLANG_PROMPT_PREFIX}"
+        echo -n "system: $(go --version | cut -f3 -d ' ' | sed 's/%/%%/g')"
+        echo -n "${ZSH_THEME_GOLANG_PROMPT_SUFFIX}"
+    }
 fi
 
 unset FOUND_GOENV goenvdirs dir

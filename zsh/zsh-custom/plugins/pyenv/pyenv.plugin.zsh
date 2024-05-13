@@ -40,13 +40,11 @@ if [[ $FOUND_PYENV -eq 1 ]]; then
         echo "${ZSH_THEME_PYTHON_PROMPT_SUFFIX}"
     }
 else
-    function current_ruby() { echo "not supported" }
-    function current_gemset() { echo "not supported" }
-    function gems() { echo "not supported" }
-    function rbenv_prompt_info() {
-      echo -n "${ZSH_THEME_RUBY_PROMPT_PREFIX}"
-      echo -n "system: $(python --version | cut -f-2 -d ' ' | sed 's/%/%%/g')"
-      echo "${ZSH_THEME_RUBY_PROMPT_SUFFIX}"
+    function current_python() { echo "not supported" }
+    function pyenv_prompt_info() {
+        echo -n "${ZSH_THEME_PYTHON_PROMPT_PREFIX}"
+        echo -n "system: $(python3 --version | cut -f2 -d ' ' | sed 's/%/%%/g')"
+        echo "${ZSH_THEME_PYTHON_PROMPT_SUFFIX}"
     }
 fi
 

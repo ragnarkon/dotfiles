@@ -3,7 +3,7 @@
 if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
     PROMPT='[%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] \
 [%{$fg[red]%}$(rbenv_prompt_info)\
-%{$reset_color%}|%{$fg[yellow]%}$(pyenv_prompt_info)\
+%{$reset_color%}|%{$fg[cyan]%}$(goenv_prompt_info)\
 %{$reset_color%}|%{$fg[magenta]%}$(tfenv_prompt_info)\
 %{$reset_color%}]\
 $(git_prompt_info)$(git_prompt_status)%{$reset_color%}
