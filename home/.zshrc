@@ -17,6 +17,9 @@ esac
 # Homebrew installs to a different path on ARM64 macOS devices
 if [ "${OS}" = "macOS" ]; then
   if [ "$(arch)" = "arm64" ]; then
+    if [ -d "/opt/homebrew/sbin" ]; then
+      export PATH=/opt/homebrew/sbin:$PATH
+    fi
     if [ -d "/opt/homebrew/bin" ]; then
       export PATH=/opt/homebrew/bin:$PATH
     fi
@@ -172,5 +175,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pbcopy="xclip -selection clipboard"
-alias pbpaste="xclip -selection clipboard -o"
+if [ "${OS}" != "macOS" ]; then
+  alias pbcopy="xclip -selection clipboard"
+  alias pbpaste="xclip -selection clipboard -o"
+fi
