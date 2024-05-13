@@ -27,7 +27,7 @@ brew "nodenv"                                  # Shim manager for Node.js
 # Helpful CLI utilities
 brew "bat"                                     # Fancy 'cat' replacement
 brew "dos2unix"                                # CRLF <-> LF conversion
-brew "exa"                                     # Fancy 'ls' replacement
+brew "eza"                                     # Fancy 'ls' replacement
 brew "fzf"                                     # Fuzzy finder
 brew "jq"                                      # JSON parser/processor
 brew "httpie"                                  # Like 'curl', but easier
