@@ -152,6 +152,12 @@ if [[ -f "/etc/os-release" && "$(awk -F= '/^NAME/{print $2}' /etc/os-release)" =
   export LS_COLORS=$LS_COLORS:'ow=7;32:'
 fi
 
+# Fix terminal colors on macOS
+if [ "${TERM_PROGRAM}" = "Apple_Terminal" ]; then
+  export CLICOLOR=1
+  # export LSCOLORS=ExFxBxDxCxegedabagacad
+fi
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

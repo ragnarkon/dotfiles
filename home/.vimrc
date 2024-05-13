@@ -20,10 +20,10 @@ inoremap kj <esc>
 set number
 
 " Show colors
-if (has("termguicolors"))
+if (has("termguicolors") && $TERM_PROGRAM != "Apple_Terminal")
   set termguicolors
 else
-  let g:onedark_termcolors=16
+  let g:onedark_termcolors=256
 endif
 filetype plugin indent on
 syntax enable
