@@ -1,9 +1,6 @@
 # This file contains user-specific environment variables that I wish to share
 # with both Bash and ZSH
 
-# Go
-export GOPATH=$HOME/repos/gopath
-
 # CA Certs (pip, among others)
 if [ -f $HOME/.cacert.pem ]; then
   export CAFILE=$HOME/.cacert.pem

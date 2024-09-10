@@ -8,7 +8,9 @@
 
 set nocompatible
 
-" Remap esc to jk
+set mouse=a
+
+" Because the Touch Bar exists 
 inoremap jk <esc>
 inoremap kj <esc>
 
