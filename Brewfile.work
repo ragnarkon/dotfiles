@@ -1,0 +1,20 @@
+tap "homebrew/bundle"
+
+# Public Cloud
+# brew "awscli"                                  # Amazon Web Services CLI
+# brew "azure-cli"                               # Microsoft Azure CLI
+cask "google-cloud-sdk"                        # Google Cloud SDK
+
+# Dev Tools
+cask "docker"                                  # Containers
+# cask "drawio"                                  # Flowcharts
+# cask "paw"                                     # API tool
+
+# Windoze stuff
+# cask "powershell"                              # Windows automation & config framework
+# brew "mono"                                    # .NET Framework
+
+# Randomness
+# cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
+# cask "wireshark"                               # Network analysis
+# cask "xquartz"                                 # X11

@@ -1,43 +1,31 @@
-tap "homebrew/core"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 
-# Brews
-
-# Brews - As Meeded
-# brew "doctl"                                 # Digital Ocean
-
-# Casks
+## Casks
 cask "1password"                               # Password manager
+cask "carbon-copy-cloner"                      # MVP macOS Backup Software
 cask "discord"                                 # Chat/VoIP/distribution software
-cask "firefox"                                 # Web browser
 cask "iina"                                    # Media player
-cask "imageoptim"                              # Image toolkit app
 cask "monodraw"                                # ASCII flowcharts
-cask "notion"                                  # Note taking app
-cask "orion"                                   # WebKit-based browser
 cask "raycast"                                 # All-around awesome
 cask "textual"                                 # IRC client
-cask "viscosity"                               # OpenVPN. open-source alternative: tunnelblick
 
-# Casks - As Needed
-# cask "1password-cli"                         # 1password CLI
-# cask "vagrant"                               # VM manager
-# cask "vmware-fusion"                         # Hypervisor
-
-# App Store Apps
+## App Store Apps
 brew "mas"                                     # CLI to the App Store
-mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without the subscription
-mas "Affinity Photo", id: 824183456            # Adobe Photoshop, but without the subscription
-mas "Affinity Publisher", id: 881418622        # Adobe InDesign, but without the subscription
+mas "Affinity Designer 2", id: 1616831348      # Adobe Illustrator, but without the subscription
+mas "Affinity Photo 2", id: 1616822987         # Adobe Photoshop, but without the subscription
+mas "Affinity Publisher 2", id: 1606941598     # Adobe InDesign, but without the subscription
 mas "Compressor", id: 424390742                # Media encoder
 mas "Craft", id: 1487937127                    # Note taking application
-mas "Dropover", id: 1355679052                 # Organize stuff easily
 mas "Final Cut Pro", id: 424389933             # Non-linear editor
-mas "Logic Pro X", id: 634148309               # Digital audio workstation
 mas "Motion", id: 434290957                    # Motion graphics software
-mas "Xcode", id: 497799835                     # Apple's IDE
+mas "Windows App", id: 1295203466              # Remote Desktop Solution
+mas "WireGuard", id: 1451685025                # VPN Solution
 
-# App Store Apps - As Needed
-# mas "MainStage 3", id: 634159523             # Live music performance software
+## Safari Extensions
+mas "1Password for Safari", id: 1569813296     # 1Password Safari Extension
+mas "Dark Reader for Safari", id: 1438243180   # Nighty night go webpages
+
+## Outdated
+#mas "Affinity Photo", id: 824183456            # Adobe Photoshop, but without the subscription
+#mas "Affinity Publisher", id: 881418622        # Adobe InDesign, but without the subscription
+#mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without the subscription
