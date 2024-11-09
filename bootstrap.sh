@@ -13,18 +13,20 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "Installing Xcode Tools..."
 xcode-select --install
 
+# TODO: Add Xcode wait loop
+# xcode-select -p 1>/dev/null;echo $?
+
 # Install homebrew
 echo "Installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install Ruby & Homesick
-# TODO: ADD STUFF TO PATH
+# Install Homesick
 brew install rbenv
-rbenv install 3.3.1
-eval "$(rbenv init -)"
-rbenv shell 3.3.1
+rbenv install 3.3.6
+eval "$(rbenv init - --no-rehash zsh)"
+rbenv shell 3.3.6
 gem install homesick --no-document
-rbenv rehash
 
 # Setup Homesick Castle
 homesick clone ragnarkon/dotfiles
@@ -34,14 +36,6 @@ homesick symlink dotfiles
 echo "Installing apps from Brewfile..."
 brew bundle --file=~/.homesick/repos/dotfiles/Brewfile
 brew cleanup
-
-echo "Changing default shell to zsh..."
-sudo dscl . -create "/Users/$USER" UserShell /usr/local/bin/zsh
-
-# Install iTerm colors
-# echo "Installing 'One Dark' & 'One Light' colors for iTerm2..."
-# open ~/.homesick/repos/dotfiles/colors/atom-one-dark-terminal/scheme/iterm/One\ Dark.itermcolors
-# open ~/.homesick/repos/dotfiles/colors/atom-one-dark-terminal/scheme/iterm/One\ Light.itermcolors
 
 echo "Finished!"
 echo

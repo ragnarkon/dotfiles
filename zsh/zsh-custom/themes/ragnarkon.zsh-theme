@@ -7,8 +7,6 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
 %{$reset_color%}|%{$fg[cyan]%}$(goenv_prompt_info)\
 %{$reset_color%}|%{$fg[magenta]%}$(tfenv_prompt_info)\
 %{$reset_color%}]\
- [%{$fg[blue]%}$(fmcc_prompt_info)\
-%{$reset_color%}]\
 $(git_prompt_info)$(git_prompt_status)%{$reset_color%}
 %# '
 

@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 
 # Core Apps
 brew "bash"                                    # Shell
@@ -15,6 +14,10 @@ brew "zsh"                                     # Shell
 ## Ruby
 brew "ruby-build"                              # Builds Ruby
 brew "rbenv"                                   # Shim manager for Ruby
+## Perl
+brew "perl-build"                              # Builds Perl
+brew "plenv"                                   # Shim manager for Perl
+brew "cpanminus"                               # CLI tool for CPAN
 ## Python
 brew "pyenv"                                   # Shim manager for Python
 brew "pipenv"                                  # Python package dependency manager
@@ -54,7 +57,7 @@ cask "visual-studio-code"                      # Code editor
 cask "font-source-code-pro"                    # Font of choice
 
 # Public Cloud
-cask "google-cloud-sdk"                        # Google Cloud SDK
+# cask "google-cloud-sdk"                        # Google Cloud SDK
 brew "tfenv"                                   # Shim manager for Terraform
 
 # App Store Apps
@@ -64,11 +67,6 @@ brew "mas"                                     # CLI to the App Store
 # brew "awscli"                                  # Amazon Web Services CLI
 # brew "azure-cli"                               # Microsoft Azure CLI
 # brew "mono"                                    # .NET Framework
-## Perl
-# brew "perl-build"                              # Builds Perl
-# brew "plenv"                                   # Shim manager for Perl
-# brew "cpanminus"                               # CLI tool for CPAN
-
 
 # As needed - Casks
 # cask "docker"                                  # Containers
