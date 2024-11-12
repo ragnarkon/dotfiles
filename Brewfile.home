@@ -5,6 +5,7 @@ cask "1password"                               # Password manager
 cask "carbon-copy-cloner"                      # MVP macOS Backup Software
 cask "discord"                                 # Chat/VoIP/distribution software
 cask "iina"                                    # Media player
+cask "microsoft-excel"                         # The only Office app worth having
 cask "monodraw"                                # ASCII flowcharts
 cask "raycast"                                 # All-around awesome
 cask "textual"                                 # IRC client

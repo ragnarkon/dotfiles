@@ -5,10 +5,14 @@ tap "homebrew/bundle"
 # brew "azure-cli"                               # Microsoft Azure CLI
 cask "google-cloud-sdk"                        # Google Cloud SDK
 
-# Dev Tools
-cask "docker"                                  # Containers
-# cask "drawio"                                  # Flowcharts
-# cask "paw"                                     # API tool
+# Container Tools
+brew "colima"                                  # Container manager
+brew "docker"                                  # Containers
+brew "docker-buildx"                           # Better Docker builder
+brew "helm"                                    # Kubernetes manifests
+brew "tektoncd-cli"                            # Tekton CI/CD
+brew "tektoncd-pac"                            # Tekton Pipelines-as-Code
+cask "openshift-client"                        # RedHat OpenShift Client
 
 # Windoze stuff
 # cask "powershell"                              # Windows automation & config framework

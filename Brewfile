@@ -49,15 +49,14 @@ brew "mycli"                                   # MySQL / MariaDB CLI client
 brew "pgcli"                                   # PostgreSQL CLI client
 
 # Core Casks
-cask "dash"                                    # API browser
 cask "iterm2"                                  # Terminal emulator
-cask "visual-studio-code"                      # Code editor
 
 # Fonts
 cask "font-source-code-pro"                    # Font of choice
+cask "font-source-sans-3"                      # Sans font of choice
+cask "font-source-serif-4"                     # Serif font of choice
 
 # Public Cloud
-# cask "google-cloud-sdk"                        # Google Cloud SDK
 brew "tfenv"                                   # Shim manager for Terraform
 
 # App Store Apps
@@ -69,20 +68,22 @@ brew "mas"                                     # CLI to the App Store
 # brew "mono"                                    # .NET Framework
 
 # As needed - Casks
+# cask "dash"                                    # API browser
 # cask "docker"                                  # Containers
 # cask "drawio"                                  # Flowcharts
 # cask "google-chrome"                           # Web browser
+# cask "google-cloud-sdk"                        # Google Cloud SDK
 # cask "min"                                     # Minimal web browser
 # cask "paw"                                     # API tool
 # cask "powershell"                              # Windows automation & config framework
+# cask "visual-studio-code"                      # Code editor
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
 # cask "wireshark"                               # Network analysis
 # cask "xquartz"                                 # X11
 
 # As needed - App Store Apps
-# mas "Bear", id: 1091189122                     # Note taking app
 # mas "Microsoft Remote Desktop", id: 1295203466 # RDP client
-# mas "SnippetsLab", id: 1006087419              # Code snippet manager
+# mas "Windows App", id: 1295203466              # New RDP client
 
-# Cool, but practically pointless
+# # Cool, but practically pointless
 # brew "neofetch", args: ["without-imagemagick"] # Displays OS Info
