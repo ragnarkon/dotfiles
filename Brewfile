@@ -32,6 +32,7 @@ brew "bat"                                     # Fancy 'cat' replacement
 brew "dos2unix"                                # CRLF <-> LF conversion
 brew "eza"                                     # Fancy 'ls' replacement
 brew "fzf"                                     # Fuzzy finder
+brew "gnu-tar"                                 # GNU version of tar
 brew "jq"                                      # JSON parser/processor
 brew "httpie"                                  # Like 'curl', but easier
 brew "pandoc"                                  # Converts between doc formats

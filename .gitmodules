@@ -73,3 +73,6 @@
 [submodule "home/.vim/bundle/vim-prettier"]
 	path = home/.vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "home/.vim/bundle/vim-base64"]
+	path = home/.vim/bundle/vim-base64
+	url = https://github.com/christianrondeau/vim-base64.git
