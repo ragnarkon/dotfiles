@@ -120,7 +120,6 @@ plugins=(
   rbenv
   tfenv
   kubectl
-  stc
 )
 
 case $OS in

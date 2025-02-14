@@ -76,3 +76,6 @@
 [submodule "home/.vim/bundle/vim-base64"]
 	path = home/.vim/bundle/vim-base64
 	url = https://github.com/christianrondeau/vim-base64.git
+[submodule "home/.vim/bundle/copilot.vim"]
+	path = home/.vim/bundle/copilot.vim
+	url = https://github.com/github/copilot.vim.git
