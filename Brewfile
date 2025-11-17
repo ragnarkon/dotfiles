@@ -29,6 +29,7 @@ brew "nodenv"                                  # Shim manager for Node.js
 
 # Helpful CLI utilities
 brew "bat"                                     # Fancy 'cat' replacement
+brew "doggo"                                   # Dig, but awesome
 brew "dos2unix"                                # CRLF <-> LF conversion
 brew "eza"                                     # Fancy 'ls' replacement
 brew "fzf"                                     # Fuzzy finder
@@ -38,11 +39,10 @@ brew "httpie"                                  # Like 'curl', but easier
 brew "pandoc"                                  # Converts between doc formats
 brew "ripgrep"                                 # Regex file line searching tool
 brew "thefuck"                                 # Fat finger fixer
-brew "tldr"                                    # Documentation that doesn't suck
 brew "watch"                                   # Run command on schedule, watch output
 brew "yamllint"                                # Lints YAML files.
 brew "yq"                                      # YAML parser/processor that works like jq
-brew "xsv"                                     # CSV toolkit
+brew "xan"                                     # CSV toolkit
 
 # Database CLI clients
 brew "litecli"                                 # SQLite CLI client
@@ -64,19 +64,12 @@ brew "tfenv"                                   # Shim manager for Terraform
 brew "mas"                                     # CLI to the App Store
 
 # As needed
-# brew "awscli"                                  # Amazon Web Services CLI
-# brew "azure-cli"                               # Microsoft Azure CLI
-# brew "mono"                                    # .NET Framework
 
 # As needed - Casks
 # cask "dash"                                    # API browser
-# cask "docker"                                  # Containers
 # cask "drawio"                                  # Flowcharts
 # cask "google-chrome"                           # Web browser
-# cask "google-cloud-sdk"                        # Google Cloud SDK
-# cask "min"                                     # Minimal web browser
 # cask "paw"                                     # API tool
-# cask "powershell"                              # Windows automation & config framework
 # cask "visual-studio-code"                      # Code editor
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
 # cask "wireshark"                               # Network analysis

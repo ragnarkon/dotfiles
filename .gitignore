@@ -1,7 +1,10 @@
 Brewfile.lock.json
 
 # Private settings
+home/.config/argocd
+home/.config/containers
 home/.config/gcloud
+home/.config/github-copilot
 home/.config/iterm2/AppSupport
 home/.config/NuGet
 home/.config/op
