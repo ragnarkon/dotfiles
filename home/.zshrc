@@ -112,7 +112,6 @@ plugins=(
   git
   golang
   pdk
-  thefuck
   goenv
   nodenv
   plenv
@@ -120,6 +119,7 @@ plugins=(
   rbenv
   tfenv
   kubectl
+  vi-mode
 )
 
 case $OS in
