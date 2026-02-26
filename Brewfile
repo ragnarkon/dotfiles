@@ -57,7 +57,7 @@ cask "font-source-sans-3"                      # Sans font of choice
 cask "font-source-serif-4"                     # Serif font of choice
 
 # Public Cloud
-brew "tfenv"                                   # Shim manager for Terraform
+brew "tenv"                                    # Shim manager for Terraform
 
 # App Store Apps
 brew "mas"                                     # CLI to the App Store

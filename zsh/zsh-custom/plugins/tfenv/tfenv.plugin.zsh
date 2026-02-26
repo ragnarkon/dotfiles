@@ -2,6 +2,7 @@
 # the 'tfenv_prompt_info' function.
 # Based off of the rbenv plugin.
 
+FOUND_TENV=$+commands[tenv]
 FOUND_TFENV=$+commands[tfenv]
 FOUND_TERRAFORM=$+commands[terraform]
 
@@ -25,7 +26,25 @@ if [[ $FOUND_TFENV -ne 1 ]]; then
   fi
 fi
 
-if [[ $FOUND_TFENV -eq 1 ]]; then
+if [[ $FOUND_TENV -eq 1 ]]; then
+  alias terraforms="tenv tf list"
+
+  function current_terraform() {
+    local tfver=$(tenv tf detect -q 2>/dev/null | cut -f 2 -d ' ')
+    if [[ -z $tfver ]]; then
+      echo "none"
+    else
+      echo "$tfver"
+    fi
+  }
+
+  function tfenv_prompt_info() {
+    local terraform=$(current_terraform)
+    echo -n "${ZSH_THEME_TERRAFORM_PROMPT_PREFIX}"
+    echo -n "${terraform}"
+  }
+
+elif [[ $FOUND_TFENV -eq 1 ]]; then
   alias terraforms="tfenv list"
 
   function current_terraform() {
