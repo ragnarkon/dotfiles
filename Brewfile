@@ -38,7 +38,6 @@ brew "fzf"                                     # Fuzzy finder
 brew "gnu-tar"                                 # GNU version of tar
 brew "httpie"                                  # Like 'curl', but easier
 brew "jq"                                      # JSON parser/processor
-brew "lazygit"                                 # Terminal UI for git
 brew "pandoc"                                  # Converts between doc formats
 brew "ripgrep"                                 # Regex file line searching tool
 brew "tree-sitter-cli"                         # CLI for tree-sitter, a parser generator tool and incremental parsing library
@@ -59,7 +58,7 @@ cask "iterm2"                                  # Terminal emulator
 cask "font-source-code-pro"                    # Font of choice
 cask "font-source-sans-3"                      # Sans font of choice
 cask "font-source-serif-4"                     # Serif font of choice
-cask "font sauce-code-pro-nerd-font"           # Nerd Font version of Source Code Pro
+cask "font-sauce-code-pro-nerd-font"           # Nerd Font version of Source Code Pro
 
 # Public Cloud
 brew "tenv"                                    # Shim manager for Terraform
@@ -73,6 +72,7 @@ brew "mas"                                     # CLI to the App Store
 # cask "dash"                                    # API browser
 # cask "drawio"                                  # Flowcharts
 # cask "google-chrome"                           # Web browser
+# brew "lazygit"                                 # Terminal UI for git
 # cask "paw"                                     # API tool
 # cask "visual-studio-code"                      # Code editor
 # cask "vmware-remote-console"                   # VM consoles from vCenter/ESXi
