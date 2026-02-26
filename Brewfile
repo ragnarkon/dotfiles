@@ -5,6 +5,7 @@ brew "bash"                                    # Shell
 brew "coreutils"                               # GNU Core Utils
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits
+brew "nvim"                                    # Text editor
 brew "subversion"                              # Source code manager
 brew "tmux"                                    # Terminal multiplexer
 brew "vim"                                     # Text editor
@@ -32,12 +33,15 @@ brew "bat"                                     # Fancy 'cat' replacement
 brew "doggo"                                   # Dig, but awesome
 brew "dos2unix"                                # CRLF <-> LF conversion
 brew "eza"                                     # Fancy 'ls' replacement
+brew "fd"                                      # Fast file finder
 brew "fzf"                                     # Fuzzy finder
 brew "gnu-tar"                                 # GNU version of tar
-brew "jq"                                      # JSON parser/processor
 brew "httpie"                                  # Like 'curl', but easier
+brew "jq"                                      # JSON parser/processor
+brew "lazygit"                                 # Terminal UI for git
 brew "pandoc"                                  # Converts between doc formats
 brew "ripgrep"                                 # Regex file line searching tool
+brew "tree-sitter-cli"                         # CLI for tree-sitter, a parser generator tool and incremental parsing library
 brew "watch"                                   # Run command on schedule, watch output
 brew "yamllint"                                # Lints YAML files.
 brew "yq"                                      # YAML parser/processor that works like jq
@@ -55,6 +59,7 @@ cask "iterm2"                                  # Terminal emulator
 cask "font-source-code-pro"                    # Font of choice
 cask "font-source-sans-3"                      # Sans font of choice
 cask "font-source-serif-4"                     # Serif font of choice
+cask "font sauce-code-pro-nerd-font"           # Nerd Font version of Source Code Pro
 
 # Public Cloud
 brew "tenv"                                    # Shim manager for Terraform
