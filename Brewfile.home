@@ -1,32 +1,34 @@
 tap "homebrew/bundle"
 
 ## Casks
-cask "1password"                               # Password manager
-cask "carbon-copy-cloner"                      # MVP macOS Backup Software
-cask "discord"                                 # Chat/VoIP/distribution software
-cask "iina"                                    # Media player
-cask "microsoft-excel"                         # The only Office app worth having
-cask "monodraw"                                # ASCII flowcharts
-cask "raycast"                                 # All-around awesome
-cask "textual"                                 # IRC client
+cask "1password"                                # Password manager
+cask "carbon-copy-cloner"                       # MVP macOS Backup Software
+cask "discord"                                  # Chat/VoIP/distribution software
+cask "iina"                                     # Media player
+cask "microsoft-excel"                          # The only Office app worth having
+cask "monodraw"                                 # ASCII flowcharts
+cask "raycast"                                  # All-around awesome
+cask "textual"                                  # IRC client
 
 ## App Store Apps
-brew "mas"                                     # CLI to the App Store
-mas "Affinity Designer 2", id: 1616831348      # Adobe Illustrator, but without the subscription
-mas "Affinity Photo 2", id: 1616822987         # Adobe Photoshop, but without the subscription
-mas "Affinity Publisher 2", id: 1606941598     # Adobe InDesign, but without the subscription
-mas "Compressor", id: 424390742                # Media encoder
-mas "Craft", id: 1487937127                    # Note taking application
-mas "Final Cut Pro", id: 424389933             # Non-linear editor
-mas "Motion", id: 434290957                    # Motion graphics software
-mas "Windows App", id: 1295203466              # Remote Desktop Solution
-mas "WireGuard", id: 1451685025                # VPN Solution
+brew "mas"                                      # CLI to the App Store
+mas "Compressor", id: 424390742                 # Media encoder
+mas "Craft", id: 1487937127                     # Note taking application
+mas "Final Cut Pro", id: 424389933              # Non-linear editor
+mas "Motion", id: 434290957                     # Motion graphics software
+mas "Photomator - Photo Editor", id: 1444636541 # Lightroom, but without the subscription
+mas "Pixelmator Pro", id: 1289583905            # Photoshop, but without the subscription
+mas "Windows App", id: 1295203466               # Remote Desktop Solution
+mas "WireGuard", id: 1451685025                 # VPN Solution
 
 ## Safari Extensions
 mas "1Password for Safari", id: 1569813296     # 1Password Safari Extension
 mas "Dark Reader for Safari", id: 1438243180   # Nighty night go webpages
 
 ## Outdated
-#mas "Affinity Photo", id: 824183456            # Adobe Photoshop, but without the subscription
-#mas "Affinity Publisher", id: 881418622        # Adobe InDesign, but without the subscription
-#mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without the subscription
+# mas "Affinity Photo", id: 824183456            # Adobe Photoshop, but without the subscription
+# mas "Affinity Publisher", id: 881418622        # Adobe InDesign, but without the subscription
+# mas "Affinity Designer", id: 824171161         # Adobe Illustrator, but without the subscription
+# mas "Affinity Designer 2", id: 1616831348      # Adobe Illustrator, but without the subscription
+# mas "Affinity Photo 2", id: 1616822987         # Adobe Photoshop, but without the subscription
+# mas "Affinity Publisher 2", id: 1606941598     # Adobe InDesign, but without the subscription
