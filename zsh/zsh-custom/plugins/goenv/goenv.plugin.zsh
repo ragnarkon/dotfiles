@@ -37,7 +37,7 @@ if [[ $FOUND_GOENV -eq 1 ]]; then
     }
 else
     function current_golang() { echo "not supported" }
-    function pyenv_prompt_info() {
+    function goenv_prompt_info() {
         echo -n "${ZSH_THEME_GOLANG_PROMPT_PREFIX}"
         echo -n "system: $(go --version | cut -f3 -d ' ' | sed 's/%/%%/g')"
         echo -n "${ZSH_THEME_GOLANG_PROMPT_SUFFIX}"

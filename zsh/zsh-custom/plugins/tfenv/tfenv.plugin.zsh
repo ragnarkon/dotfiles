@@ -30,10 +30,11 @@ if [[ $FOUND_TENV -eq 1 ]]; then
   alias terraforms="tenv tf list"
 
   function current_terraform() {
-    local tfver=$(tenv tf detect -q 2>/dev/null | cut -f 2 -d ' ')
-    if [[ -z $tfver ]]; then
+    local tfdetect=$(tenv tf detect -q 2>/dev/null)
+    if [[ $tfdetect = "no compatible"* ]]; then
       echo "none"
     else
+      local tfver=$(tenv tf detect -q 2>/dev/null | cut -f 2 -d ' ')
       echo "$tfver"
     fi
   }
