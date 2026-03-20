@@ -1,0 +1,6 @@
+command = "/opt/homebrew/bin/zsh"
+font-family = "SauceCodePro Nerd Font"
+font-size = "16"
+font-style = "Medium"
+shell-integration = none
+theme = "Atom One Dark"

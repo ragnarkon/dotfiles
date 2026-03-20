@@ -52,7 +52,8 @@ brew "mycli"                                   # MySQL / MariaDB CLI client
 brew "pgcli"                                   # PostgreSQL CLI client
 
 # Core Casks
-cask "iterm2"                                  # Terminal emulator
+cask "ghostty"                                 # Terminal emulator
+# cask "iterm2"                                  # Terminal emulator
 
 # Fonts
 cask "font-source-code-pro"                    # Font of choice
