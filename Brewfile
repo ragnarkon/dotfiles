@@ -38,6 +38,7 @@ brew "fzf"                                     # Fuzzy finder
 brew "gnu-tar"                                 # GNU version of tar
 brew "httpie"                                  # Like 'curl', but easier
 brew "jq"                                      # JSON parser/processor
+brew "mole"                                    # System Cleaner
 brew "pandoc"                                  # Converts between doc formats
 brew "ripgrep"                                 # Regex file line searching tool
 brew "tree-sitter-cli"                         # CLI for tree-sitter, a parser generator tool and incremental parsing library
@@ -53,7 +54,6 @@ brew "pgcli"                                   # PostgreSQL CLI client
 
 # Core Casks
 cask "ghostty"                                 # Terminal emulator
-# cask "iterm2"                                  # Terminal emulator
 
 # Fonts
 cask "font-source-code-pro"                    # Font of choice
@@ -73,6 +73,7 @@ brew "mas"                                     # CLI to the App Store
 # cask "dash"                                    # API browser
 # cask "drawio"                                  # Flowcharts
 # cask "google-chrome"                           # Web browser
+# cask "iterm2"                                  # Terminal emulator
 # brew "lazygit"                                 # Terminal UI for git
 # cask "paw"                                     # API tool
 # cask "visual-studio-code"                      # Code editor

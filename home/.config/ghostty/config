@@ -1,6 +1,26 @@
+########################################
+#
+# Ghostty Config
+#
+# Bryan Woolsey
+# https://github.com/ragnarkon
+#
+########################################
+
+# General
+auto-update = off
+# TODO:Change based on what operationg system I'm using
 command = "/opt/homebrew/bin/zsh"
-font-family = "SauceCodePro Nerd Font"
-font-size = "16"
-font-style = "Medium"
+# Needed to fix weird issue with newlines and Ghostty configuration
+# FIXME:Maybe be able to use psvar to get around it, will figure it out later
 shell-integration = none
+
+# Appearance
 theme = "Atom One Dark"
+window-padding-x = 2
+window-padding-y = 0
+
+# Font Configurations
+font-family = "SauceCodePro Nerd Font"
+font-size = 16
+font-style = "Medium"
