@@ -6,6 +6,7 @@ home/.config/containers
 home/.config/gcloud
 home/.config/github-copilot
 home/.config/iterm2/AppSupport
+home/.config/mole/*.log
 home/.config/NuGet
 home/.config/op
 home/.config/pgcli

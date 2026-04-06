@@ -1,0 +1,5 @@
+require("plugins.ai")
+require("plugins.colorscheme")
+require("plugins.editor")
+require("plugins.formatting")
+require("plugins.lsp")

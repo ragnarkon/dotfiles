@@ -1,5 +1,5 @@
--- require("ragnarkon")
-require("config.lazy")
+require("config")
+-- require("config.lazy")
 
 -- vim.cmd([[
 --   set runtimepath^=~/.vim runtimepath+=~/.vim/after
