@@ -5,6 +5,7 @@ vim.g.autoformat = true
 local opt = vim.opt
 
 opt.autocomplete = true
+opt.autoindent = true
 opt.cmdheight = 2
 opt.conceallevel = 2
 opt.confirm = true
