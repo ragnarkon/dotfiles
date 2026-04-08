@@ -2,15 +2,15 @@ vim.pack.add({
   -- Dependencies
   "https://github.com/nvim-lua/plenary.nvim", -- dependency for todo-comments
   "https://github.com/nvim-tree/nvim-web-devicons", -- dependency for barbar, fzf-lua, lualine
+  "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 
   -- Plugins
-  "https://github.com/ibhagwan/fzf-lua",
   "https://github.com/folke/trouble.nvim",
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/romgrk/barbar.nvim",
-  "https://github.com/folke/snacks.nvim",
+  "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/folke/which-key.nvim",
 })
 
@@ -40,24 +40,12 @@ require("barbar").setup({
   auto_hide = 1,
 })
 
--- Snacks
-require("snacks").setup({
-  bigfile = { enabled = false },
-  dashboard = { enabled = false },
-  explorer = { enabled = true },
-  indent = { enabled = true },
-  input = { enabled = false },
-  picker = { enabled = true },
-  notifier = { enabled = false },
-  quickfile = { enabled = false },
-  scope = { enabled = false },
-  scroll = { enabled = false },
-  statuscolumn = { enabled = false },
-  words = { enabled = false },
-})
--- Snacks Explorer keymaps
-vim.keymap.set("n", "<leader><space>", function() Snacks.picker.smart() end, { desc = "Smart Find Files" })
-vim.keymap.set("n", "<leader>fg", function() Snacks.picker.git_files() end, { desc = "Find Git Files" })
+-- Telescope
+require("telescope").setup()
+require("telescope").load_extension("fzf")
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').find_files, { desc = "Telescope find files" })
+vim.keymap.set('n', '<leader>fg', require('telescope.builtin').git_files, { desc = "Telescope find git files" })
+vim.keymap.set('n', '<leader>rg', require('telescope.builtin').live_grep, { desc = "Telescope live grep" })
 
 require("which-key").setup({
   preset = "helix",
