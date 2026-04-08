@@ -13,6 +13,7 @@ auto-update = off
 command = "/opt/homebrew/bin/zsh"
 # Needed to fix weird issue with newlines and Ghostty configuration
 # FIXME:Maybe be able to use psvar to get around it, will figure it out later
+# Apparently will be fixed in Ghostty 1.3.2, maybe
 shell-integration = none
 
 # Appearance
