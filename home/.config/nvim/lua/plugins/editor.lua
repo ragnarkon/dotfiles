@@ -2,6 +2,7 @@ vim.pack.add({
   -- Dependencies
   "https://github.com/nvim-lua/plenary.nvim", -- dependency for todo-comments
   "https://github.com/nvim-tree/nvim-web-devicons", -- dependency for barbar, fzf-lua, lualine
+  "https://github.com/nvim-mini/mini.nvim", -- dependency for something
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 
   -- Plugins
