@@ -17,3 +17,4 @@ home/.config/wireshark
 home/.config/wslu
 home/.vim/.netrwhist
 home/.config/chezmoi
+home/.zsh/cache/**

@@ -1,1 +1,119 @@
-eval "$(starship init zsh)"
+## ZSH OPTS
+
+# Directory options
+setopt auto_cd # Change to a directory just by typing its name
+setopt auto_pushd # Automatically pushd when changing directories
+setopt pushd_ignore_dups # Don't add duplicate entries to the directory stack
+setopt pushd_minus # Use 'pushd -' to toggle between the current and previous directory
+
+# History options
+setopt extended_history # Record timestamp of command in history file
+setopt hist_expire_dups_first # Expire duplicate entries first when trimming history
+setopt hist_ignore_dups # Don't record duplicate entries in history
+setopt hist_ignore_space # Don't record commands that start with a space in history
+
+# Misc options
+setopt multios # Allow output to be sent to multiple files
+
+# Completion options
+unsetopt menu_complete # Don't automatically select the first completion match
+unsetopt flowcontrol # Don't pause completion when there are multiple matches
+setopt always_to_end # Move cursor to end of line when navigating to a new prompt
+setopt auto_menu # Show completion menu after ambiguous completion
+setopt complete_in_word # Allow completion to match substrings
+
+zstyle ':completion:*:*:*:*:*' menu select # Use menu selection for completion
+zstyle ':completion:*' special-dirs true # Include directories in completion matches
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories # Prioritize local directories and directory stack in cd completion
+zstyle ':completion:*' use-cache true # Cache completion results for faster performance
+zstyle ':completion:*' cache-path ~/.zsh/cache # Directory to store completion cache
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # Default match, Case-insensitive completion, magic match, magic match
+# NOTE: To future self: The magic match in the matcher list above is far as I can tell is magic, don't even try to understand it. It was created by wizards.
+# If you really decide that you care about it... `man zshcompwid`. GL;HF
+
+autoload -Uz compinit && compinit # Initialize zsh's completion system
+
+## PLUGINS
+HOMESICK_DIR="${HOME}/.homesick/repos/dotfiles"
+ZSH_PLUGIN_DIR="${HOME}/.zsh/plugins"
+
+# Shell prompt
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+fi
+
+# GPG Connect Agent
+if (( $+commands[gpg-connect-agent] )); then
+  source $ZSH_PLUGIN_DIR/gpg-agent-custom.plugin.zsh
+fi
+
+# fzf integration
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
+
+## ZSH COLORS
+
+# Fix stupid LS_COLORS on Ubuntu.
+# FIXME: There was a reason I had to do this for Pop!_OS, but I can't remember what it was.
+# Probably not even needed anymore.
+if [[ -f "/etc/os-release" && "$(awk -F= '/^NAME/{print $2}' /etc/os-release)" = "\"Ubuntu\"" ]]; then
+  eval `dircolors`
+  export LS_COLORS=$LS_COLORS:'ow=7;32:'
+else
+  # BSD/macOS version of `ls` uses the LSCOLORS and CLICOLOR variables
+  if [[ "$OS" == "macOS" ]]; then
+    export CLICOLOR=1
+    #export LSCOLORS=''
+  fi
+  
+  # GNU version of `ls` uses LS_COLORS
+  if (( $+commands[vivid] )); then
+    export LS_COLORS=$(vivid generate one-dark)
+  fi
+fi
+
+# ZSH Syntax Highlighting
+if (( $+commands[brew] )); then
+  zsh_syntax_file="${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  if [[ -f "$zsh_syntax_file" ]]; then
+    source $zsh_syntax_file
+  fi
+  unset zsh_syntax_file
+# TODO: Add support for Linux someday
+fi
+
+# ZSH Completion Colors
+zstyle ':completion:*' list-colors ''
+
+## ALIASES
+
+# Use GNU ls if coreutils is installed, otherwise fall back to default ls.
+if [[ "$OS" == "macOS" ]]; then
+  if (( $+commands[gls] )); then
+    alias ls="gls --color"
+  else
+    alias ls="ls -G"
+  fi
+else
+  alias ls="ls --color"
+fi
+
+alias la="ls -lAh"
+alias ll="ls -lh"
+alias lsa="ls -lah"
+
+# Safety when using the 'correct_all` option
+if [[ -o "correct_all" ]]; then
+  alias cp='nocorrect cp'
+  alias mv='nocorrect mv'
+  alias rm='nocorrect rm'
+  alias mkdir='nocorrect mkdir'
+  alias sudo='nocorrect sudo'
+  alias su='nocorrect su'
+fi
+
+## LOAD UNIVERSAL PROFILE
+if [[ -f "$HOME/.profile" ]]; then
+  source $HOME/.profile
+fi

@@ -4,6 +4,12 @@ format = """
 $username\
 $hostname\
 $directory\
+$ruby\
+$python\
+$golang\
+$terraform\
+$kubernetes\
+$gcloud\
 $git_branch\
 $git_commit\
 $git_state\
@@ -18,31 +24,74 @@ show_always = true
 format = '[\[](bold)[$user]($style)[@](bold)'
 
 [hostname]
+ssh_symbol = " "
 style = 'bold yellow'
 ssh_only = false
-format = '[$hostname]($style)[:](bold)'
+format = '[$hostname$ssh_symbol]($style)[:](bold)'
 
 [directory]
 style = 'bold blue'
 format = '[$path]($style)[$read_only]($read_only_style)[\]](bold) '
 repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\] '
 
+[ruby]
+symbol = " "
+format = '\[[$symbol$version]($style)\] '
+
+[golang]
+symbol = " "
+format = '\[[$symbol$version]($style)\] '
+
+[python]
+symbol = " "
+format = '\[[$symbol$version]($style)\] '
+
+[terraform]
+symbol = " "
+format = '\[[$symbol$version]($style)\] '
+
+[perl]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[gcloud]
+symbol = " "
+disabled = true
+
+[kubernetes]
+symbol = " "
+disabled = false
+style = 'cyan'
+format = '\[[$symbol$context/$namespace]($style)\] '
+
+[[kubernetes.contexts]]
+context_pattern = ".*/api-(?P<ocpcluster>(sb|pp)[\\w-]+)-caas.*"
+context_alias = '$ocpcluster'
+
+[[kubernetes.contexts]]
+style = "red"
+context_pattern = ".*/api-(?P<ocpcluster>pd[\\w-]+)-caas.*"
+context_alias = '$ocpcluster'
+
 [git_branch]
-style = 'bold green'
+symbol = " "
+style = 'green'
 format = '[\[](bold)[$symbol$branch(:$remote_branch)]($style)[\]](bold) '
 
 [git_status]
-style = 'bold'
-conflicted = '='
-ahead = '[⇡](blue)'
-behind = '[⇣](red)'
-diverged = '⇕'
+style = ''
+conflicted = '= '
+ahead = '[⇡](blue) '
+behind = '[⇣](red) '
+diverged = '⇕ '
 untracked = '[?](cyan) '
-stashed = '\$'
+stashed = '[\$](blue) '
 modified = '[!](yellow) '
-staged = '[+](green) '
-renamed = '»'
-deleted = '[✘](red) '
+staged = '[✚](green) '
+renamed = '» '
+deleted = '[✖](red) '
 format = '([$all_status$ahead_behind]($style) )'
 
 [character]

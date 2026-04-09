@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-
 # Core Apps
 brew "bash"                                    # Shell
 brew "coreutils"                               # GNU Core Utils
@@ -10,7 +8,9 @@ brew "starship"                                # Cross-platform prompt
 brew "subversion"                              # Source code manager
 brew "tmux"                                    # Terminal multiplexer
 brew "vim"                                     # Text editor
+brew "vivid"                                   # LS_COLORS generator
 brew "zsh"                                     # Shell
+brew "zsh-syntax-highlighting"                 # Syntax highlighting for zsh
 
 # Languages
 ## Ruby
