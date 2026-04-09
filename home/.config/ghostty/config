@@ -17,7 +17,8 @@ command = "/opt/homebrew/bin/zsh"
 shell-integration = none
 
 # Appearance
-theme = "Atom One Dark"
+theme = "Catppuccin Mocha"
+# theme = "Atom One Dark"
 window-padding-x = 2
 window-padding-y = 0
 

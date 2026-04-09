@@ -10,10 +10,6 @@
   path = home/.vim/bundle/vim-puppet
   url = https://github.com/rodjek/vim-puppet.git
   branch = master
-[submodule "zsh/oh-my-zsh"]
-  path = zsh/oh-my-zsh
-  url = https://github.com/robbyrussell/oh-my-zsh.git
-  branch = master
 [submodule "home/.vim/bundle/dash.vim"]
   path = home/.vim/bundle/dash.vim
   url = https://github.com/rizzatti/dash.vim.git

@@ -6,6 +6,7 @@ brew "coreutils"                               # GNU Core Utils
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits
 brew "nvim"                                    # Text editor
+brew "starship"                                # Cross-platform prompt
 brew "subversion"                              # Source code manager
 brew "tmux"                                    # Terminal multiplexer
 brew "vim"                                     # Text editor
