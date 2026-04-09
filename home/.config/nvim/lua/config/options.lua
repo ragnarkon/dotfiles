@@ -27,7 +27,6 @@ opt.signcolumn = "yes"
 opt.smartcase = true
 opt.smartindent = true
 opt.tabstop = 2
-opt.termguicolors = true
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200

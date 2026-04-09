@@ -14,11 +14,11 @@ command = "/opt/homebrew/bin/zsh"
 # Needed to fix weird issue with newlines and Ghostty configuration
 # FIXME:Maybe be able to use psvar to get around it, will figure it out later
 # Apparently will be fixed in Ghostty 1.3.2, maybe
-shell-integration = none
+# shell-integration = none
 
 # Appearance
-theme = "Catppuccin Mocha"
-# theme = "Atom One Dark"
+#theme = "Catppuccin Mocha"
+theme = "Atom One Dark"
 window-padding-x = 2
 window-padding-y = 0
 
