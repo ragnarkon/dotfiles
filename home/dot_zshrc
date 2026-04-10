@@ -47,6 +47,8 @@ ZSH_PLUGIN_DIR="${HOME}/.zsh/plugins"
 # Shell prompt
 if (( $+commands[starship] )); then
   eval "$(starship init zsh)"
+else
+  PROMPT=$'[%F{green}%n%f@%F{yellow}%m%f:%F{blue}%~%f]\n%# '
 fi
 
 # GPG Connect Agent
