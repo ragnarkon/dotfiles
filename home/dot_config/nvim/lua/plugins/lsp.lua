@@ -26,7 +26,25 @@ require("mason-lspconfig").setup({
 })
 
 -- LSP Server overrides
-vim.lsp.config("bashls", { filetypes = { "sh", "bash", "zsh" } }) -- Tell bashls to check zsh
+
+-- Tell bashls to check ZSH
+vim.lsp.config("bashls", {
+  filetypes = {
+    "sh", "bash", "zsh"
+  }
+})
+
+-- Tell lua_ls to recognize the `vim` globals
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  },
+})
+
 vim.diagnostic.config({
   underline = true,
   update_in_insert = false,

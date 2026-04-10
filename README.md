@@ -1,23 +1,40 @@
 # Dotfiles repo
 
-I work in IT operations in the cloud engineering group (one of the handful of SRE-like teams) for a Fortune 500 company. My team is responsible for all things public cloud,
-as well as integrations between the public cloud and our "traditional" data centers.
+Your typical Dotfiles repo for your typical DevOps guy.
 
-My focus in particular revolves around various infrastructure-as-code tools (ie. Terraform) and configuration management tools (ie. Puppet). Therefore, my dotfiles repo
-will be heavily opinionated towards using those tools. That said, most of this repo consists of tools and utilities are common across the IT world.
+My focus in particular revolves around various infrastructure-as-code tools (ie. Terraform), configuration management tools (ie. Puppet), and various CI/CD pipelines. Therefore,
+my dotfiles repo will be heavily opinionated towards using those tools. That said, most of this repo consists of tools and utilities are common across the IT world.
 
 ## Bootstrap
 
-`curl -O https://raw.githubusercontent.com/ragnarkon/dotfiles/master/bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh`
+I manage my Dotfiles with [chezmoi](https://github.com/twpayne/chezmoi)-super awesome, highly recommended. chezmoi is written in Golang and allows for one-line installation
+of your dotfiles repository.
 
-ps. I just setup a new laptop tonight and this thing is totally broken. Will fix later.
+```shell
+# sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ragnarkon
+```
+
+## Stuff I Use
+
+This is the core stuff most people care about:
+
+- Operating System: macOS
+- Terminal: ghostty
+- Shell: Zsh
+- Package Manager: Homebrew
+- Editor: vim / neovim
+- Languages: Ruby, Golang, Python, Terraform/OpenTofu, Puppet
+
+Checkout [Brewfile](Brewfile), [Brewfile.home](Brewfile.home), and [Brewfile.work](Brewfile.work) if you want a complete list of tools I use.
+
+Obviously, this profile is written with macOS in mind. In the past I used Linux, so it is written in a way that it should *mostly* work on Linux-but expect an uphill battle.
+If you want the Windows equivalent of this repo, checkout the not-well-maintained [dotfiles-windows](https://github.com/ragnarkon/dotfiles-windows.git) repo.
 
 ## Manual-ish Installation
 
-I use [Homesick](https://github.com/technicalpickles/homesick) to manage my dotfiles.
-
-1. Install Homesick: `/usr/bin/gem install homesick`
-2. Clone this repository (known as a "Castle" in Homesick speak): `homesick clone ragnarkon/dotfiles`
-3. Symlink the dotfiles: `homesick symlink dotfiles`
-4. Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-5. Install packages/applications: `cd $(homesick show_path) && brew bundle`
+1. Install chezmoi with you favorite package manager. (ie. `brew install chezmoi`)
+2. Clone this repository an run the init process: `chezmoi init https://github.com/ragnarkon/dotfiles.git`
+3. Answer the prompts during the init process. (This is primarily to setup `~/.gitconfig`)
+4. Run `chezmoi apply` to place your dotfiles in the correct location
