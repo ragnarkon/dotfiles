@@ -1,0 +1,22 @@
+[user]
+  name = {{ .name | quote }}
+  email = {{ .email }}
+[commit]
+  gpgsign = true
+[color]
+  ui = true
+[core]
+  editor = {{ .editor }}
+  ignorecase = false
+  excludesfile = ~/.gitignore
+[diff]
+  tool = {{ .editor }}diff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$REMOTE\" \"$LOCAL\""
+[merge]
+  tool = {{ .editor }}diff
+[pager]
+  branch = false
+  tag = false
+[include]
+  path = ~/.gitconfig.work

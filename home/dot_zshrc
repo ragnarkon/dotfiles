@@ -31,6 +31,13 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=*
 # NOTE: To future self: The magic match in the matcher list above is far as I can tell is magic, don't even try to understand it. It was created by wizards.
 # If you really decide that you care about it... `man zshcompwid`. GL;HF
 
+if [[ -d "$HOME/.zsh/completion" ]]; then
+  fpath=(
+    ~/.zsh/completion/
+    $fpath
+  )
+fi
+
 autoload -Uz compinit && compinit # Initialize zsh's completion system
 
 ## PLUGINS

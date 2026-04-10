@@ -1,0 +1,8 @@
+{{- $name := promptStringOnce . "name" "Full Name" -}}
+{{- $email := promptStringOnce . "email" "Email Address" -}}
+{{- $editor := promptChoiceOnce . "editor" "What editor?" (list "vim" "neovim") "neovim" -}}
+
+[data]
+  name = {{ $name | quote }}
+  email = {{ $email | quote }}
+  editor = {{ if $editor = "neovim" }}{{ "nvim" | quote }}{{ else }}{{ $editor | quote}}{{ end }}
