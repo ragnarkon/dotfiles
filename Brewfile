@@ -1,5 +1,6 @@
 # Core Apps
 brew "bash"                                    # Shell
+brew "chezmoi"                                 # Dotfiles manager
 brew "coreutils"                               # GNU Core Utils
 brew "git"                                     # Source code manager
 brew "gnupg"                                   # GnuPG, for signed Git commits

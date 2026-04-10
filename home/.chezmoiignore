@@ -1,0 +1,18 @@
+# Private settings
+.config/argocd
+.config/chezmoi
+.config/containers
+.config/gcloud
+.config/github-copilot
+.config/iterm2/AppSupport
+.config/mole/*.log
+.config/NuGet
+.config/op
+.config/pgcli
+.config/puppet/analytics.yml
+.config/thefuck/__pycache__
+.config/raycast
+.config/wireshark
+.config/wslu
+.vim/.netrwhist
+.zsh/cache/**
