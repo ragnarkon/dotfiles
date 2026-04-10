@@ -38,8 +38,13 @@ if [[ $FOUND_GOENV -eq 1 ]]; then
 else
     function current_golang() { echo "not supported" }
     function goenv_prompt_info() {
+        local gover=${$(go --version 2> /dev/null | cut -f3 -d ' ' | sed 's/%/%%/g')}
+        if [[ -z $gover ]];
+        then
+          gover="none"
+        fi
         echo -n "${ZSH_THEME_GOLANG_PROMPT_PREFIX}"
-        echo -n "system: $(go --version | cut -f3 -d ' ' | sed 's/%/%%/g')"
+        echo -n "system: ${gover}"
         echo -n "${ZSH_THEME_GOLANG_PROMPT_SUFFIX}"
     }
 fi
