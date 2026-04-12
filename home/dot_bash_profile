@@ -1,3 +1,54 @@
-if [ -f ~/.bashrc ]; then 
-    source ~/.bashrc 
+
+# Determine what environment we're actually running in
+case "$(uname -ra)" in
+  *Microsoft*)  OS="WSL";;
+  *microsoft*)  OS="WSL2";;
+  Linux*)       OS="Linux";;
+  Darwin*)      OS="macOS";;
+  CYGWIN*)      OS="Cygwin";;
+  MINGW*)       OS="Windows";;
+  *Msys)        OS="Windows";;
+  *)            OS="UNKNOWN:$(uname -r)"
+esac
+
+# Homebrew setup
+if [ "$OS" == "macOS" ]; then
+  HOMEBREW_SETUP=1
+fi
+
+if [ -n "${HOMEBREW_SETUP-}" ]; then
+  UNAME_ARCH="$(/usr/bin/uname -m)"
+
+  if [ "$UNAME_ARCH" == "arm64" ]; then
+    HOMEBREW_PREFIX="/opt/homebrew"
+  else
+    HOMEBREW_PREFIX="/usr/local"
+  fi
+  
+  eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+fi
+
+# Setup code *env stuff
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init - --no-rehash bash)"
+fi
+
+if [ -x "$(command -v pyenv)" ]; then
+  eval "$(pyenv init - --no-rehash bash)"
+fi
+
+if [ -x "$(command -v goenv)" ]; then
+  eval "$(goenv init - --no-rehash bash)"
+fi
+
+if [ -x "$(command -v nodenv)" ]; then
+  eval "$(nodenv init - --no-rehash bash)"
+fi
+
+if [ -x "$(command -v tfenv)" ]; then
+  eval "$(tfenv init - --no-rehash bash)"
+fi
+
+if [ -x "$(command -v plenv)" ]; then
+  eval "$(plenv init - --no-rehash bash)"
 fi

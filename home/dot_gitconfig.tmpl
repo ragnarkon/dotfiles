@@ -1,6 +1,9 @@
 [user]
   name = {{ .name | quote }}
   email = {{ .email }}
+{{- if .gpgkey }}
+  signingkey = {{ .gpgkey }}!
+{{- end }}
 [commit]
   gpgsign = true
 [color]

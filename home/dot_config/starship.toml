@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$shell\
 $username\
 $hostname\
 $directory\
@@ -17,6 +18,12 @@ $git_status\
 $line_break\
 $character
 """
+
+[shell]
+disabled = false
+bash_indicator = ' '
+zsh_indicator = ''
+format = '[$indicator]($style)'
 
 [username]
 style_user = 'bold green'
