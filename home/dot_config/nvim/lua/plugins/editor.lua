@@ -6,7 +6,6 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 
   -- Plugins
-  "https://github.com/folke/trouble.nvim",
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
@@ -14,16 +13,6 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/folke/which-key.nvim",
 })
-
--- Trouble
-require("trouble").setup({
-  modes = {
-    lsp = {
-      win = { position = "right" },
-    },
-  }
-})
-vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", {desc = "Diagnostics (Trouble)" })
 
 -- Todo Comments
 require("todo-comments").setup()
