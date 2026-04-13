@@ -6,6 +6,7 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 
   -- Plugins
+  "https://github.com/stevearc/oil.nvim",
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
@@ -13,6 +14,10 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/folke/which-key.nvim",
 })
+
+-- Oil
+require("oil").setup()
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Todo Comments
 require("todo-comments").setup()
