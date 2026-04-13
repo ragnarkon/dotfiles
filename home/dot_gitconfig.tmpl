@@ -1,7 +1,7 @@
 [user]
   name = {{ .name | quote }}
   email = {{ .email }}
-{{- if .gpgkey }}
+{{- if index . "gpgkey" }}
   signingkey = {{ .gpgkey }}!
 {{- end }}
 [commit]
