@@ -8,4 +8,8 @@ require("conform").setup({
     timeout_ms = 3000,
     lsp_fallback = "fallback",
   },
+  formatters_by_ft = {
+    terraform = { "terraform_fmt" },
+    ["_"] = { "trim_whitespace" },
+  },
 })
