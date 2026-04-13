@@ -1,75 +1,100 @@
 [".vim/bundle/indentLine"]
   type = "git-repo"
   url = "https://github.com/Yggdroot/indentLine.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-json"]
   type = "git-repo"
   url = "https://github.com/elzr/vim-json.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-puppet"]
   type = "git-repo"
   url = "https://github.com/rodjek/vim-puppet.git"
+  refreshPeriod = "336h"
 [".vim/bundle/dash.vim"]
   type = "git-repo"
   url = "https://github.com/rizzatti/dash.vim.git"
+  refreshPeriod = "336h"
 [".vim/bundle/lightline.vim"]
   type = "git-repo"
   url = "https://github.com/itchyny/lightline.vim.git"
+  refreshPeriod = "336h"
 [".vim/bundle/lightline-bufferline"]
   type = "git-repo"
   url = "https://github.com/mgee/lightline-bufferline.git"
+  refreshPeriod = "336h"
 [".vim/bundle/onedark.vim"]
   type = "git-repo"
   url = "https://github.com/joshdick/onedark.vim.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-gitgutter"]
   type = "git-repo"
   url = "https://github.com/airblade/vim-gitgutter.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-commentary"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-commentary.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-rails"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-rails.git"
+  refreshPeriod = "336h"
 [".vim/bundle/lightline-ale"]
   type = "git-repo"
   url = "https://github.com/maximbaz/lightline-ale.git"
+  refreshPeriod = "336h"
 [".vim/bundle/ale"]
   type = "git-repo"
   url = "https://github.com/w0rp/ale.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-fugitive"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-fugitive.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-bundler"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-bundler.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-dispatch"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-dispatch.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-pathogen"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-pathogen.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-terraform"]
   type = "git-repo"
   url = "https://github.com/hashivim/vim-terraform.git"
+  refreshPeriod = "336h"
 [".vim/bundle/fzf.vim"]
   type = "git-repo"
   url = "https://github.com/junegunn/fzf.vim.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-go"]
   type = "git-repo"
   url = "https://github.com/fatih/vim-go.git"
+  refreshPeriod = "336h"
 [".vim/bundle/fzf"]
   type = "git-repo"
   url = "https://github.com/junegunn/fzf.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-vinegar"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-vinegar.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-surround"]
   type = "git-repo"
   url = "https://github.com/tpope/vim-surround.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-prettier"]
   type = "git-repo"
   url = "https://github.com/prettier/vim-prettier.git"
+  refreshPeriod = "336h"
 [".vim/bundle/vim-base64"]
   type = "git-repo"
   url = "https://github.com/christianrondeau/vim-base64.git"
+  refreshPeriod = "336h"
 [".vim/bundle/copilot.vim"]
   type = "git-repo"
   url = "https://github.com/github/copilot.vim.git"
+  refreshPeriod = "336h"
