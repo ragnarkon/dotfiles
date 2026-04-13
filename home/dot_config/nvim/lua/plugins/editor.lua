@@ -78,6 +78,7 @@ end
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').find_files, { desc = "Telescope find files" })
 vim.keymap.set('n', '<leader>fg', vim.find_files_from_project_git_root, { desc = "Telescope find git files" })
 vim.keymap.set('n', '<leader>rg', require('telescope.builtin').live_grep, { desc = "Telescope live grep" })
+vim.keymap.set('n', '<leader>xx', require('telescope.builtin').diagnostics, { desc = "Telescope diagnostics" })
 
 require("which-key").setup({
   preset = "helix",
