@@ -1,5 +1,6 @@
 vim.pack.add({
   "https://github.com/stevearc/conform.nvim",
+  "https://github.com/mfussenegger/nvim-lint",
 })
 
 -- Conform
