@@ -7,6 +7,9 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   "https://github.com/mason-org/mason.nvim",
   "https://github.com/neovim/nvim-lspconfig",
+
+  -- Language-specific
+  "https://github.com/qvalentin/helm-ls.nvim",
 })
 
 -- Treesitter
