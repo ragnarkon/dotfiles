@@ -10,6 +10,7 @@ require("conform").setup({
   },
   formatters_by_ft = {
     terraform = { "terraform_fmt" },
+    yaml = { "prettierd", "prettier", stop_after_first = true },
     ["_"] = { "trim_whitespace" },
   },
 })
