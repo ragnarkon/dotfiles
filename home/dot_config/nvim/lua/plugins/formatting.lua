@@ -15,3 +15,6 @@ require("conform").setup({
     ["_"] = { "trim_whitespace" },
   },
 })
+
+-- Nvim-lint
+require("lint").linters_by_ft = {}
