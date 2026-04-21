@@ -17,7 +17,7 @@ require("conform").setup({
   },
 })
 
-vim.opts.formatexpr = "v:lua.require'conform'.formatexpr()"
+vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 
 -- Nvim-lint
 require("lint").linters_by_ft = {}
