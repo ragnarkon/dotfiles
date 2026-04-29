@@ -7,6 +7,7 @@ vim.pack.add({
 
   -- Plugins
   "https://github.com/stevearc/oil.nvim",
+  "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
@@ -18,6 +19,9 @@ vim.pack.add({
 -- Oil
 require("oil").setup()
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Indent lines
+require("ibl").setup()
 
 -- Todo Comments
 require("todo-comments").setup()
