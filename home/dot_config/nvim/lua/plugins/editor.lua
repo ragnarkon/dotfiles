@@ -41,6 +41,7 @@ require("lualine").setup({
 require("barbar").setup({
   auto_hide = 1,
 })
+vim.keymap.set('n', '<leader>b', require('barbar.api').pick_buffer, { desc = "Barbar Magic Pick" })
 
 -- Telescope
 local telescope = require("telescope")
