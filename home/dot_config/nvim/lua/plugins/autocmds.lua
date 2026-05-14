@@ -3,14 +3,11 @@
 
 -- Telescope fzf native
 -- FIXME: This doesn't seem to work for whatever reason
-vim.api.nvim_create_autocmd('PackChanged', {
+vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
-    if name == 'telescope-fzf-native.nvim' and (kind == 'install' or kind == 'update') then
-      vim.system(
-        { 'make' },
-        { cwd = ev.data.path }
-      ):wait()
+    if name == "telescope-fzf-native.nvim" and (kind == "install" or kind == "update") then
+      vim.system({ "make" }, { cwd = ev.data.path }):wait()
     end
   end,
 })
@@ -18,7 +15,6 @@ vim.api.nvim_create_autocmd('PackChanged', {
 -- Nvim-lint
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   callback = function()
-
     -- try_lint without arguments runs the linters defined in `linters_by_ft`
     -- for the current filetype
     require("lint").try_lint()

@@ -41,7 +41,7 @@ require("lualine").setup({
 require("barbar").setup({
   auto_hide = 1,
 })
-vim.keymap.set('n', '<leader>b', require('barbar.api').pick_buffer, { desc = "Barbar Magic Pick" })
+vim.keymap.set("n", "<leader>b", require("barbar.api").pick_buffer, { desc = "Barbar Magic Pick" })
 
 -- Telescope
 local telescope = require("telescope")
@@ -57,16 +57,16 @@ table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
 
 telescope.setup({
-	defaults = {
-		-- `hidden = true` is not supported in text grep commands.
-		vimgrep_arguments = vimgrep_arguments,
-	},
-	pickers = {
-		find_files = {
-			hidden = true,
-			find_command = { "rg", "--files", "--color", "never", "-g", "!.git" },
-		},
-	},
+  defaults = {
+    -- `hidden = true` is not supported in text grep commands.
+    vimgrep_arguments = vimgrep_arguments,
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
+      find_command = { "rg", "--files", "--color", "never", "-g", "!.git" },
+    },
+  },
 })
 require("telescope").load_extension("fzf")
 
@@ -88,11 +88,11 @@ function vim.find_files_from_project_git_root()
   require("telescope.builtin").find_files(opts)
 end
 
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').find_files, { desc = "Telescope find files" })
-vim.keymap.set('n', '<leader>fg', vim.find_files_from_project_git_root, { desc = "Telescope find git files" })
-vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = "Telescope buffers" })
-vim.keymap.set('n', '<leader>rg', require('telescope.builtin').live_grep, { desc = "Telescope live grep" })
-vim.keymap.set('n', '<leader>xx', require('telescope.builtin').diagnostics, { desc = "Telescope diagnostics" })
+vim.keymap.set("n", "<leader><space>", require("telescope.builtin").find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", vim.find_files_from_project_git_root, { desc = "Telescope find git files" })
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>rg", require("telescope.builtin").live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>xx", require("telescope.builtin").diagnostics, { desc = "Telescope diagnostics" })
 
 require("which-key").setup({
   preset = "helix",

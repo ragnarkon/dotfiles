@@ -15,8 +15,8 @@ vim.pack.add({
 -- Treesitter
 -- FIXME: This is wrong, but we're gonna roll with it for now because nvim-treesitter is archived anyway.
 require("nvim-treesitter").setup()
-vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.wo[0][0].foldmethod = 'expr'
+vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.wo[0][0].foldmethod = "expr"
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 -- Mason
@@ -33,8 +33,10 @@ require("mason-lspconfig").setup({
 -- Tell bashls to check ZSH
 vim.lsp.config("bashls", {
   filetypes = {
-    "sh", "bash", "zsh"
-  }
+    "sh",
+    "bash",
+    "zsh",
+  },
 })
 
 -- Tell lua_ls to recognize the `vim` globals

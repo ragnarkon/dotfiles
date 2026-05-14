@@ -1,8 +1,8 @@
 -- Turn on DiffTool
-vim.cmd('packadd! nvim.difftool')
+vim.cmd("packadd! nvim.difftool")
 
 -- Enable experimental UI feature.
-require('vim._core.ui2').enable()
+require("vim._core.ui2").enable()
 
 require("plugins.autocmds")
 require("plugins.ai")
