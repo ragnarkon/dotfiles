@@ -5,5 +5,3 @@ vim.treesitter.start()
 -- Language server
 require("mason-lspconfig").setup({ ensure_installed = { "terraformls", "tflint" } })
 vim.lsp.enable("terraformls")
-
-require("helm-ls").setup()

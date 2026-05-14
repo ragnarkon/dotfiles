@@ -18,4 +18,14 @@ require("conform").setup({
 vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 
 -- Nvim-lint
-require("lint").linters_by_ft = {}
+require("lint").linters_by_ft = {
+  terraform = { "tflint" },
+  tombi = { "tombi" },
+  zsh = { "zsh" },
+}
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})
