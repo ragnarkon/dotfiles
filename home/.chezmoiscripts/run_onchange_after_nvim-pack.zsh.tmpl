@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# nvim-pack-lock.json hash: {{ include "dot_config/nvim/nvim-pack-lock.json" | sha256sum }}
+nvim -V1 -es +'lua vim.pack.update(nil, { target = "lockfile", force = true })'

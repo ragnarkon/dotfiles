@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+if (( ${+commands[brew]} )); then
+  brew bundle --file {{ joinPath .chezmoi.workingTree "Brewfile" | quote }}
+fi

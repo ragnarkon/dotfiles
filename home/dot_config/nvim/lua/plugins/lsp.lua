@@ -14,7 +14,17 @@ vim.pack.add({
 
 -- Treesitter
 -- FIXME: This is wrong, but we're gonna roll with it for now because nvim-treesitter is archived anyway.
-require("nvim-treesitter").setup()
+-- require("nvim-treesitter").setup()
+
+-- Gotmpl injection
+vim.treesitter.query.add_directive("inject-go-tmpl!", function(_, _, bufnr, _, metadata)
+  local fname = vim.fs.basename(vim.api.nvim_buf_get_name(bufnr))
+  local _, _, ext, _ = string.find(fname, ".*%.([^.]+)(%.%a+)")
+  if ext then
+    metadata["injection.language"] = ext
+  end
+end, {})
+
 vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.wo[0][0].foldmethod = "expr"
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
