@@ -1,5 +1,16 @@
 #!/usr/bin/env zsh
 
 if (( ${+commands[brew]} )); then
+  # Brewfile hash: {{ (joinPath .chezmoi.workingTree "Brewfile" | quote) | sha256sum }}
   brew bundle --file {{ joinPath .chezmoi.workingTree "Brewfile" | quote }}
+  {{- if eq .type "work" }}
+
+  # Brewfile.work hash: {{ (joinPath .chezmoi.workingTree "Brewfile.work" | quote) | sha256sum }}
+  brew bundle --file {{ joinPath .chezmoi.workingTree "Brewfile.work" | quote }}
+  {{- end }}
+  {{- if eq .type "home" }}
+
+  # Brewfile.home hash: {{ (joinPath .chezmoi.workingTree "Brewfile.home" | quote) | sha256sum }}
+  brew bundle --file {{ joinPath .chezmoi.workingTree "Brewfile.home" | quote }}
+  {{- end }}
 fi

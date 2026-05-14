@@ -1,11 +1,13 @@
 {{- $name := promptStringOnce . "name" "Full Name" -}}
 {{- $email := promptStringOnce . "email" "Email Address" -}}
+{{- $type := promptChoiceOnce . "type" "Which config?" (list "general" "home" "work") "general" -}}
 {{- $editor := promptChoiceOnce . "editor" "What editor?" (list "vim" "neovim") "neovim" -}}
 {{- $gpgkey := promptStringOnce . "gpgkey" "Custom GPG Signing Key" "none" -}}
 
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
+  type = {{ $type | quote }}
   editor = {{ if eq $editor "neovim" }}{{ "nvim" | quote }}{{ else }}{{ $editor | quote}}{{ end }}
 {{- if ne $gpgkey "none" }}
   gpgkey = {{ $gpgkey | quote }}
