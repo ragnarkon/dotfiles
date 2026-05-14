@@ -9,7 +9,7 @@ require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
     markdown = { "prettierd", "prettier", stop_after_first = true },
-    terraform = { "tofu_fmt", "terraform_fmt", stop_after_first = true },
+    terraform = { "terraform_fmt", "tofu_fmt", stop_after_first = true },
     yaml = { "prettierd", "prettier", stop_after_first = true },
     ["_"] = { "trim_whitespace" },
   },
@@ -19,7 +19,7 @@ vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 
 -- Nvim-lint
 require("lint").linters_by_ft = {
-  terraform = { "tflint" },
+  terraform = { "tflint", "terraform_validate" },
   tombi = { "tombi" },
   zsh = { "zsh" },
 }
