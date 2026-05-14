@@ -3,16 +3,16 @@ tap "homebrew/bundle"
 # Public Cloud
 # brew "awscli"                                  # Amazon Web Services CLI
 # brew "azure-cli"                               # Microsoft Azure CLI
-cask "google-cloud-sdk"                        # Google Cloud SDK
+cask "gcloud-cli"                              # Google Cloud SDK
 
 # Container Tools
 brew "colima"                                  # Container manager
 brew "docker"                                  # Containers
 brew "docker-buildx"                           # Better Docker builder
 brew "helm"                                    # Kubernetes manifests
-brew "tektoncd-cli"                            # Tekton CI/CD
-brew "tektoncd-pac"                            # Tekton Pipelines-as-Code
 cask "openshift-client"                        # RedHat OpenShift Client
+brew "tektoncd-cli"                            # Tekton CI/CD
+# brew "tektoncd-pac"                            # Tekton Pipelines-as-Code, install on this is wonky
 
 # Windoze stuff
 # cask "powershell"                              # Windows automation & config framework
