@@ -58,6 +58,8 @@ table.insert(vimgrep_arguments, "!**/.git/*")
 
 telescope.setup({
   defaults = {
+    layout_strategy = "flex",
+    layout_config = { width = 0.95 },
     -- `hidden = true` is not supported in text grep commands.
     vimgrep_arguments = vimgrep_arguments,
   },
