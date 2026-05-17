@@ -19,3 +19,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+NOTICE: Repositories and software installed via package managers, Git
+submodules, chezmoi externals, or other software while utilizing this
+repository are licensed independently.
+
+Files & directories referencing external software & repositories:
+
+- [.chezmoiexternal.toml](./home/.chezmoiexternal.toml)
+- [.gitmodules](./.gitmodules)
+- [Brewfile](./Brewfile)
+- [Brewfile.home](./Brewfile.home)
+- [Brewfile.puppet](./Brewfile.puppet)
+- [Brewfile.work](./Brewfile.work)
+- [.config/nvim/lua/plugins](./home/dot_config/nvim/lua/plugins)
