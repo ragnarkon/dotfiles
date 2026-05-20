@@ -1,7 +1,7 @@
 vim.pack.add({
   -- Dependencies
   "https://github.com/nvim-lua/plenary.nvim", -- dependency for todo-comments
-  "https://github.com/nvim-tree/nvim-web-devicons", -- dependency for barbar, fzf-lua, lualine
+  "https://github.com/nvim-tree/nvim-web-devicons", -- dependency for bufferline, fzf-lua, lualine
   "https://github.com/nvim-mini/mini.nvim", -- dependency for something
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 
@@ -11,7 +11,8 @@ vim.pack.add({
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/romgrk/barbar.nvim",
+  -- "https://github.com/romgrk/barbar.nvim",
+  "https://github.com/akinsho/bufferline.nvim",
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/folke/which-key.nvim",
 })
@@ -37,11 +38,26 @@ require("lualine").setup({
   -- },
 })
 
--- BarBar
-require("barbar").setup({
-  auto_hide = 1,
+-- Bufferline
+require("bufferline").setup({
+  options = {
+    always_show_bufferline = false,
+    diagnostics = "nvim_lsp",
+    indicator = {
+      style = "underline",
+    },
+  },
 })
-vim.keymap.set("n", "<leader>b", require("barbar.api").pick_buffer, { desc = "Barbar Magic Pick" })
+vim.keymap.set("n", "<leader>b", ":BufferLinePick<cr>", { desc = "BufferLine Pick" })
+
+-- BarBar
+-- require("barbar").setup({
+--   auto_hide = 1,
+--   icons = {
+--     buffer_index = "superscript",
+--   },
+-- })
+-- vim.keymap.set("n", "<leader>b", require("barbar.api").pick_buffer, { desc = "Barbar Magic Pick" })
 
 -- Telescope
 local telescope = require("telescope")
