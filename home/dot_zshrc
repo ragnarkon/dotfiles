@@ -7,11 +7,18 @@ setopt auto_pushd # Automatically pushd when changing directories
 setopt pushd_ignore_dups # Don't add duplicate entries to the directory stack
 setopt pushd_minus # Use 'pushd -' to toggle between the current and previous directory
 
+# History config
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+[ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
+[ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
+
 # History options
 setopt extended_history # Record timestamp of command in history file
 setopt hist_expire_dups_first # Expire duplicate entries first when trimming history
 setopt hist_ignore_dups # Don't record duplicate entries in history
 setopt hist_ignore_space # Don't record commands that start with a space in history
+setopt hist_verify # Don't execute a command immediately after recalling it from history, instead show it for editing
+setopt share_history # Share command history across all sessions
 
 # Misc options
 setopt multios # Allow output to be sent to multiple files
@@ -79,7 +86,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   }
   zle -N zle-line-init
   zle -N zle-line-finish
-fi
 
 # Start typing + [Up-Arrow] - fuzzy find history forward
 autoload -U up-line-or-beginning-search
