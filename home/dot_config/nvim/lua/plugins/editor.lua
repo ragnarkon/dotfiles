@@ -9,11 +9,9 @@ vim.pack.add({
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/folke/snacks.nvim",
   "https://github.com/lewis6991/gitsigns.nvim", -- Also a dependency for barbar
-  "https://github.com/folke/todo-comments.nvim",
-  "https://github.com/nvim-lualine/lualine.nvim",
-  -- "https://github.com/romgrk/barbar.nvim",
-  "https://github.com/akinsho/bufferline.nvim",
   "https://github.com/nvim-telescope/telescope.nvim",
+  "https://github.com/folke/todo-comments.nvim",
+  "https://github.com/folke/trouble.nvim",
   "https://github.com/folke/which-key.nvim",
 })
 
@@ -27,38 +25,23 @@ require("snacks").setup({
   statuscolumn = { enabled = true },
 })
 
--- Todo Comments
-require("todo-comments").setup()
-
--- Lualine
-require("lualine").setup({
-  -- always_show_tabline = false,
-  -- tabline = {
-  --   lualine_c = { { "buffers", mode = 2 } },
-  -- },
-})
-
--- Bufferline
-require("bufferline").setup({
-  options = {
-    style_preset = require("bufferline").style_preset.no_italic,
-    always_show_bufferline = false,
-    diagnostics = "nvim_lsp",
-    indicator = {
-      style = "underline",
-    },
+require("gitsigns").setup({
+  signs = {
+    add = { text = "▎" },
+    change = { text = "▎" },
+    delete = { text = "" },
+    topdelete = { text = "" },
+    changedelete = { text = "▎" },
+    untracked = { text = "▎" },
+  },
+  signs_staged = {
+    add = { text = "▎" },
+    change = { text = "▎" },
+    delete = { text = "" },
+    topdelete = { text = "" },
+    changedelete = { text = "▎" },
   },
 })
-vim.keymap.set("n", "<leader>b", ":BufferLinePick<cr>", { desc = "BufferLine Pick" })
-
--- BarBar
--- require("barbar").setup({
---   auto_hide = 1,
---   icons = {
---     buffer_index = "superscript",
---   },
--- })
--- vim.keymap.set("n", "<leader>b", require("barbar.api").pick_buffer, { desc = "Barbar Magic Pick" })
 
 -- Telescope
 local telescope = require("telescope")
@@ -111,8 +94,41 @@ vim.keymap.set("n", "<leader><space>", require("telescope.builtin").find_files, 
 vim.keymap.set("n", "<leader>fg", vim.find_files_from_project_git_root, { desc = "Telescope find git files" })
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>rg", require("telescope.builtin").live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>xx", require("telescope.builtin").diagnostics, { desc = "Telescope diagnostics" })
 
+-- Telescope fzf native
+-- FIXME: This doesn't seem to work for whatever reason
+vim.api.nvim_create_autocmd("PackChanged", {
+  callback = function(ev)
+    local name, kind = ev.data.spec.name, ev.data.kind
+    if name == "telescope-fzf-native.nvim" and (kind == "install" or kind == "update") then
+      vim.system({ "make" }, { cwd = ev.data.path }):wait()
+    end
+  end,
+})
+
+-- Todo Comments
+require("todo-comments").setup()
+
+-- Trouble
+require("trouble").setup({
+  modes = {
+    lsp = {
+      win = { position = "right" },
+    },
+  },
+})
+vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble diagnostics" })
+vim.keymap.set(
+  "n",
+  "<leader>xX",
+  "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+  { desc = "Trouble diagnostics (Curr Buffer)" }
+)
+
+-- which-key
 require("which-key").setup({
   preset = "helix",
 })
+vim.keymap.set("n", "<leader>?", function()
+  require("which-key").show({ global = false })
+end, { desc = "Buffer Local Keymaps (which-key)" })
