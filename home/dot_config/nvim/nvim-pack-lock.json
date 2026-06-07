@@ -20,6 +20,10 @@
       "rev": "20df43509b02a3ce3c6b3eee254d6e2bffa9a370",
       "src": "https://github.com/qvalentin/helm-ls.nvim"
     },
+    "llama.vim": {
+      "rev": "77db2afe488a7f700a2027527f17ab771988e358",
+      "src": "https://github.com/ggml-org/llama.vim"
+    },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
