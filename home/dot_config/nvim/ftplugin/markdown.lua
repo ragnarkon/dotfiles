@@ -1,5 +1,8 @@
 -- Treesitter for syntax highlighting
-require("nvim-treesitter").install({ "markdown" })
+require("nvim-treesitter").install({ "markdown", "html", "yaml" })
 vim.treesitter.start()
 
-require("markdown-plus").setup()
+require("render-markdown").setup({
+  completions = { lsp = { enabled = true } },
+  latex = { enabled = false },
+})

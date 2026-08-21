@@ -10,6 +10,7 @@ vim.pack.add({
 
   -- Language-specific
   "https://github.com/qvalentin/helm-ls.nvim",
+  "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
 
 -- Treesitter

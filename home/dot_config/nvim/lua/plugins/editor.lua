@@ -13,9 +13,6 @@ vim.pack.add({
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/folke/trouble.nvim",
   "https://github.com/folke/which-key.nvim",
-
-  -- Language-specific
-  "https://github.com/YousefHadder/markdown-plus.nvim",
 })
 
 -- Oil
