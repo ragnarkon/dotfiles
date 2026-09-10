@@ -10,7 +10,7 @@ require("conform").setup({
     lua = { "stylua" },
     markdown = { "markdownlint", "prettierd", "prettier", stop_after_first = true },
     terraform = { "terraform_fmt", "tofu_fmt", stop_after_first = true },
-    yaml = { "prettierd", "prettier", stop_after_first = true },
+    yaml = { "yamlfmt", "prettierd", "prettier", stop_after_first = true },
     ["_"] = { "trim_whitespace" },
   },
 })
