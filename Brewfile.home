@@ -13,6 +13,7 @@ brew "mas"                                      # CLI to the App Store
 mas "Compressor", id: 424390742                 # Media encoder
 mas "Craft", id: 1487937127                     # Note taking application
 mas "Final Cut Pro", id: 424389933              # Non-linear editor
+mas "wBlock", id: 6746388723                    # OSS Ad blocker for Safari
 mas "Motion", id: 434290957                     # Motion graphics software
 mas "Photomator - Photo Editor", id: 1444636541 # Lightroom, but without the subscription
 mas "Pixelmator Pro", id: 1289583905            # Photoshop, but without the subscription
